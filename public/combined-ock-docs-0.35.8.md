@@ -229,7 +229,7 @@ const token = { ... };
 {' '}
 
 <TokenRow
-  token={{
+token={{
     address: "0x1234",
     chainId: 1,
     decimals: 18,
@@ -238,11 +238,11 @@ const token = { ... };
     name: "Ethereum",
     symbol: "ETH",
   }}
-  hideImage
+hideImage
 />
 
-  <TokenRow
-    token={{
+<TokenRow
+token={{
       address: '0x1234',
       chainId: 1,
       decimals: 18,
@@ -251,9 +251,9 @@ const token = { ... };
       name: 'Ethereum',
       symbol: 'ETH',
     }}
-    hideSymbol
-    hideImage
-  />
+hideSymbol
+hideImage
+/>
 </App>
 
 ## Props
@@ -658,24 +658,24 @@ description: The `<Transaction />` components provide a high-level wrap around t
 
 import { Avatar, Name } from "@coinbase/onchainkit/identity";
 import {
-  Transaction,
-  TransactionButton,
-  TransactionDefault,
-  TransactionSponsor,
-  TransactionStatus,
-  TransactionStatusAction,
-  TransactionStatusLabel,
-  TransactionToast,
-  TransactionToastAction,
-  TransactionToastIcon,
-  TransactionToastLabel,
+Transaction,
+TransactionButton,
+TransactionDefault,
+TransactionSponsor,
+TransactionStatus,
+TransactionStatusAction,
+TransactionStatusLabel,
+TransactionToast,
+TransactionToastAction,
+TransactionToastIcon,
+TransactionToastLabel,
 } from "@coinbase/onchainkit/transaction";
 import { Wallet, ConnectWallet } from "@coinbase/onchainkit/wallet";
 import TransactionWrapper from "../../components/TransactionWrapper";
 
 export const BASE_SEPOLIA_CHAIN_ID = 84532;
 export const PAYMASTER_AND_BUNDLER_ENDPOINT = import.meta.env
-  .VITE_CDP_PAYMASTER_AND_BUNDLER_ENDPOINT;
+.VITE_CDP_PAYMASTER_AND_BUNDLER_ENDPOINT;
 
 # `<Transaction />`
 
@@ -2138,11 +2138,11 @@ description: Identity components & utilities
 ---
 
 import {
-  Address,
-  Avatar,
-  Identity,
-  Name,
-  Badge,
+Address,
+Avatar,
+Identity,
+Name,
+Badge,
 } from "@coinbase/onchainkit/identity";
 
 # `<Identity />`
@@ -2753,28 +2753,28 @@ showOutline: false
 import { base } from "viem/chains";
 import { OnchainKitProvider } from "@coinbase/onchainkit";
 import {
-  Address,
-  Avatar,
-  Badge,
-  EthBalance,
-  Name,
-  Identity,
+Address,
+Avatar,
+Badge,
+EthBalance,
+Name,
+Identity,
 } from "@coinbase/onchainkit/identity";
 import {
-  Swap,
-  SwapAmountInput,
-  SwapButton,
-  SwapMessage,
-  SwapToggleButton,
+Swap,
+SwapAmountInput,
+SwapButton,
+SwapMessage,
+SwapToggleButton,
 } from "@coinbase/onchainkit/swap";
 import { color } from "@coinbase/onchainkit/theme";
 import {
-  ConnectWallet,
-  Wallet,
-  WalletDropdown,
-  WalletDropdownBasename,
-  WalletDropdownLink,
-  WalletDropdownDisconnect,
+ConnectWallet,
+Wallet,
+WalletDropdown,
+WalletDropdownBasename,
+WalletDropdownLink,
+WalletDropdownDisconnect,
 } from "@coinbase/onchainkit/wallet";
 import App from "../components/App";
 import NavigationList from "../components/landing/NavigationList";
@@ -2784,12 +2784,12 @@ import WalletComponents from "../components/WalletComponents";
 import TransactionWrapper from "../components/TransactionWrapper";
 import FundWrapper from "../components/FundWrapper";
 import {
-  Transaction,
-  TransactionButton,
-  TransactionSponsor,
-  TransactionStatus,
-  TransactionStatusAction,
-  TransactionStatusLabel,
+Transaction,
+TransactionButton,
+TransactionSponsor,
+TransactionStatus,
+TransactionStatusAction,
+TransactionStatusLabel,
 } from "@coinbase/onchainkit/transaction";
 import { FundButton } from "@coinbase/onchainkit/fund";
 import Tweets from "../components/landing/Tweets";
@@ -2859,15 +2859,15 @@ description: Customizable components for token Swap settings and slippage config
 
 import { Avatar, Name } from "@coinbase/onchainkit/identity";
 import {
-  Swap,
-  SwapAmountInput,
-  SwapButton,
-  SwapMessage,
-  SwapSettings,
-  SwapSettingsSlippageDescription,
-  SwapSettingsSlippageInput,
-  SwapSettingsSlippageTitle,
-  SwapToggleButton,
+Swap,
+SwapAmountInput,
+SwapButton,
+SwapMessage,
+SwapSettings,
+SwapSettingsSlippageDescription,
+SwapSettingsSlippageInput,
+SwapSettingsSlippageTitle,
+SwapToggleButton,
 } from "@coinbase/onchainkit/swap";
 import { Wallet, ConnectWallet } from "@coinbase/onchainkit/wallet";
 import SwapWrapper from "../../components/SwapWrapper";
@@ -3492,13 +3492,13 @@ description: Swap components & utilities
 
 import { Avatar, Name } from "@coinbase/onchainkit/identity";
 import {
-  Swap,
-  SwapAmountInput,
-  SwapButton,
-  SwapDefault,
-  SwapMessage,
-  SwapToggleButton,
-  SwapToast,
+Swap,
+SwapAmountInput,
+SwapButton,
+SwapDefault,
+SwapMessage,
+SwapToggleButton,
+SwapToast,
 } from "@coinbase/onchainkit/swap";
 import { Wallet, ConnectWallet } from "@coinbase/onchainkit/wallet";
 import SwapWrapper from "../../components/SwapWrapper";
@@ -4686,9 +4686,9 @@ description: One-click checkout for onchain commerce
 ---
 
 import {
-  Checkout,
-  CheckoutButton,
-  CheckoutStatus,
+Checkout,
+CheckoutButton,
+CheckoutStatus,
 } from "@coinbase/onchainkit/checkout";
 
 # `<Checkout />`
@@ -6633,18 +6633,18 @@ description: Introduction to Wallet Components & Utilities
 ---
 
 import {
-  ConnectWallet,
-  Wallet,
-  WalletDropdown,
-  WalletDropdownFundLink,
-  WalletDropdownDisconnect,
+ConnectWallet,
+Wallet,
+WalletDropdown,
+WalletDropdownFundLink,
+WalletDropdownDisconnect,
 } from "@coinbase/onchainkit/wallet";
 import {
-  Address,
-  Avatar,
-  Name,
-  Identity,
-  EthBalance,
+Address,
+Avatar,
+Name,
+Identity,
+EthBalance,
 } from "@coinbase/onchainkit/identity";
 import { color } from "@coinbase/onchainkit/theme";
 import WalletComponents from "../../components/WalletComponents";
@@ -6851,20 +6851,20 @@ You can override the default URL by using the `fundingUrl` prop.
 disconnect.mdx -->
 
 import {
-  Address,
-  Avatar,
-  Name,
-  Identity,
-  EthBalance,
+Address,
+Avatar,
+Name,
+Identity,
+EthBalance,
 } from "@coinbase/onchainkit/identity";
 import { color } from "@coinbase/onchainkit/theme";
 import {
-  ConnectWallet,
-  Wallet,
-  WalletDropdown,
-  WalletDropdownLink,
-  WalletDropdownBasename,
-  WalletDropdownDisconnect,
+ConnectWallet,
+Wallet,
+WalletDropdown,
+WalletDropdownLink,
+WalletDropdownBasename,
+WalletDropdownDisconnect,
 } from "@coinbase/onchainkit/wallet";
 import WalletComponents from "../../components/WalletComponents";
 
@@ -6999,22 +6999,22 @@ description: The `<Wallet />` components provide an interface for users to conne
 ---
 
 import {
-  ConnectWallet,
-  ConnectWalletText,
-  Wallet,
-  WalletDefault,
-  WalletDropdown,
-  WalletDropdownBasename,
-  WalletDropdownFundLink,
-  WalletDropdownLink,
-  WalletDropdownDisconnect,
+ConnectWallet,
+ConnectWalletText,
+Wallet,
+WalletDefault,
+WalletDropdown,
+WalletDropdownBasename,
+WalletDropdownFundLink,
+WalletDropdownLink,
+WalletDropdownDisconnect,
 } from "@coinbase/onchainkit/wallet";
 import {
-  Address,
-  Avatar,
-  Name,
-  Identity,
-  EthBalance,
+Address,
+Avatar,
+Name,
+Identity,
+EthBalance,
 } from "@coinbase/onchainkit/identity";
 import { color } from "@coinbase/onchainkit/theme";
 import AppWithRK from "../../components/AppWithRK";
@@ -7517,20 +7517,20 @@ to provide a complete wallet interaction experience.
 link.mdx -->
 
 import {
-  Address,
-  Avatar,
-  EthBalance,
-  Identity,
-  Name,
+Address,
+Avatar,
+EthBalance,
+Identity,
+Name,
 } from "@coinbase/onchainkit/identity";
 import { color } from "@coinbase/onchainkit/theme";
 import {
-  ConnectWallet,
-  Wallet,
-  WalletDropdown,
-  WalletDropdownBasename,
-  WalletDropdownDisconnect,
-  WalletDropdownLink,
+ConnectWallet,
+Wallet,
+WalletDropdown,
+WalletDropdownBasename,
+WalletDropdownDisconnect,
+WalletDropdownLink,
 } from "@coinbase/onchainkit/wallet";
 import WalletComponents from "../../components/WalletComponents";
 import { walletDropdownLinkCustomBaseIconSvg } from "../../components/svg/walletDropdownLinkCustomBaseIconSvg";
@@ -7939,19 +7939,19 @@ export type WalletDropdownLinkReact = {
 basename.mdx -->
 
 import {
-  Address,
-  Avatar,
-  EthBalance,
-  Identity,
-  Name,
+Address,
+Avatar,
+EthBalance,
+Identity,
+Name,
 } from "@coinbase/onchainkit/identity";
 import { color } from "@coinbase/onchainkit/theme";
 import {
-  ConnectWallet,
-  Wallet,
-  WalletDropdown,
-  WalletDropdownBasename,
-  WalletDropdownDisconnect,
+ConnectWallet,
+Wallet,
+WalletDropdown,
+WalletDropdownBasename,
+WalletDropdownDisconnect,
 } from "@coinbase/onchainkit/wallet";
 import WalletComponents from "../../components/WalletComponents";
 

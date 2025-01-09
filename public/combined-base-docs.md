@@ -1,24 +1,25 @@
-
 <!-- File: ../web/apps/base-docs/docs/building-with-base/base-contracts.md -->
 
 ---
+
 title: Base Contracts
 slug: /base-contracts
 description: A comprehensive list of L2 contract addresses for Base Mainnet and Base Testnet, including links to their respective blockchain explorers.
 keywords:
-  [
-    Base,
-    Base network,
-    contracts,
-    Base contracts,
-    L2 contract addresses,
-    Base contract addresses,
-    smart contracts,
-    Base smart contracts,
-    Base Mainnet,
-    Base Testnet,
-  ]
+[
+Base,
+Base network,
+contracts,
+Base contracts,
+L2 contract addresses,
+Base contract addresses,
+smart contracts,
+Base smart contracts,
+Base Mainnet,
+Base Testnet,
+]
 hide_table_of_contents: true
+
 ---
 
 # Contract Addresses
@@ -156,27 +157,27 @@ Certain contracts are mandatory according to the [OP Stack SDK](https://stack.op
 | System config owner    | [0x0fe884546476dDd290eC46318785046ef68a0BA9](https://sepolia.etherscan.io/address/0x0fe884546476dDd290eC46318785046ef68a0BA9)      | Gnosis Safe                          |
 | Guardian               | [0xA9FF930151130fd19DA1F03E5077AFB7C78F8503](https://sepolia.etherscan.io/address/0xA9FF930151130fd19DA1F03E5077AFB7C78F8503)      | EOA managed by Coinbase Technologies |
 
-
-
 <!-- File: ../web/apps/base-docs/docs/building-with-base/quickstart.md -->
 
 ---
+
 title: 'Quickstart: Deploy on Base'
 slug: /quickstart
 description: A guide to help you get started with deploying your smart contracts on Base.
 keywords:
-  [
-    Base,
-    Base network,
-    contracts,
-    Base contracts,
-    Base quickstart,
-    smart contracts,
-    Base smart contracts,
-    Base Mainnet,
-    Base Testnet,
-  ]
+[
+Base,
+Base network,
+contracts,
+Base contracts,
+Base quickstart,
+smart contracts,
+Base smart contracts,
+Base Mainnet,
+Base Testnet,
+]
 hide_table_of_contents: false
+
 ---
 
 # Quick Start: Deploy on Base
@@ -322,31 +323,31 @@ This will return the initial value of the Counter contract's `number` storage va
 <br/>
 <br/>
 
-
-
 <!-- File: ../web/apps/base-docs/docs/building-with-base/fees.md -->
 
 ---
+
 title: Fees
 slug: /fees
 description: Documentation about network fees on Base. This page covers details of the two-component cost system involving L2 execution fees and L1 security fees, and offers insights on fee variations and cost-saving strategies.
 keywords:
-  [
-    Base fees,
-    transaction fees,
-    network fees,
-    Base network fees,
-    L2 execution fee,
-    L1 security fee,
-    transaction costs,
-    gas fees,
-    fee calculation,
-    cost-saving,
-    transaction timing,
-    fee variations,
-    Base platform,
-  ]
+[
+Base fees,
+transaction fees,
+network fees,
+Base network fees,
+L2 execution fee,
+L1 security fee,
+transaction costs,
+gas fees,
+fee calculation,
+cost-saving,
+transaction timing,
+fee variations,
+Base platform,
+]
 hide_table_of_contents: true
+
 ---
 
 # Fees
@@ -372,29 +373,29 @@ For additional details about fee calculation on Base, please refer to the
 [op-stack developer
 documentation](https://docs.optimism.io/stack/transactions/fees).
 
-
-
 <!-- File: ../web/apps/base-docs/docs/building-with-base/differences.md -->
 
 ---
+
 title: Differences between Ethereum and Base
 slug: /differences
 description: Documentation covering the differences between Ethereum and Base. This page includes details on differences between opcodes, blocks, network specifications, and transaction costs.
 keywords:
-  [
-    Ethereum vs Base,
-    Base differences,
-    difference between Base and Ethereum,
-    Bedrock,
-    OP Stack,
-    Base opcodes,
-    Base blocks,
-    Base network specifications,
-    network specifications,
-    Base transaction costs,
-    transaction costs,
-  ]
+[
+Ethereum vs Base,
+Base differences,
+difference between Base and Ethereum,
+Bedrock,
+OP Stack,
+Base opcodes,
+Base blocks,
+Base network specifications,
+network specifications,
+Base transaction costs,
+transaction costs,
+]
 hide_table_of_contents: true
+
 ---
 
 # Differences between Ethereum and Base
@@ -410,32 +411,32 @@ These minor differences include:
 - [Network specifications](https://stack.optimism.io/docs/releases/bedrock/differences/#network-specifications)
 - [Transaction costs](https://stack.optimism.io/docs/releases/bedrock/differences/#transaction-costs)
 
-
-
 <!-- File: ../web/apps/base-docs/docs/building-with-base/network-information.md -->
 
 ---
+
 title: Network Information
 slug: /network-information
 description: Documentation about Base Mainnet and Base Testnet. This page covers network information for the Base network, including network names, descriptions, RPC endpoints, chain IDs, currency symbols, and block explorers.
 keywords:
-  [
-    Base network,
-    Base Mainnet,
-    Base Testnet,
-    Sepolia,
-    Base Sepolia,
-    RPC URL,
-    Base RPC URL,
-    Base RPC,
-    Chain ID,
-    chainid,
-    Base Chain ID,
-    Base chainId,
-    network information,
-    Base network information,
-  ]
+[
+Base network,
+Base Mainnet,
+Base Testnet,
+Sepolia,
+Base Sepolia,
+RPC URL,
+Base RPC URL,
+Base RPC,
+Chain ID,
+chainid,
+Base Chain ID,
+Base chainId,
+network information,
+Base network information,
+]
 hide_table_of_contents: true
+
 ---
 
 # Network Information
@@ -481,27 +482,27 @@ For production systems, we recommend using a node from one of our [node partners
 [running your own Base node]: /tutorials/run-a-base-node
 [node partners]: /docs/tools/node-providers
 
-
-
 <!-- File: ../web/apps/base-docs/docs/contracts.md -->
 
 ---
+
 title: Contracts
 slug: /contracts
 description: A list of contract addresses for various onchain apps, focusing on both the Base Mainnet and Base Testnet deployments.
 keywords:
-  [
-    onchain apps,
-    contract addresses,
-    Base Mainnet,
-    Uniswap v3,
-    Multicall3,
-    blockchain contracts,
-    decentralization,
-    cryptocurrency,
-    smart contracts,
-  ]
+[
+onchain apps,
+contract addresses,
+Base Mainnet,
+Uniswap v3,
+Multicall3,
+blockchain contracts,
+decentralization,
+cryptocurrency,
+smart contracts,
+]
 hide_table_of_contents: true
+
 ---
 
 # Contracts
@@ -585,20 +586,20 @@ Two community projects, [BaseX](https://basex-test.vercel.app/swap?currencyA=ETH
 | `Factory` | [0x7Ae58f10f7849cA6F5fB71b7f45CB416c9204b1e](https://sepolia.basescan.org/address/0x7Ae58f10f7849cA6F5fB71b7f45CB416c9204b1e) |
 | `Router`  | [0x1689E7B1F10000AE47eBfE339a4f69dECd19F602](https://sepolia.basescan.org/address/0x1689E7B1F10000AE47eBfE339a4f69dECd19F602) |
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/basenames-tutorial.md -->
 
 ---
+
 title: Basenames + Wagmi Tutorial
 slug: /basenames-tutorial-using-wagmi
 description: 'A tutorial that teaches how to integrate Basenames to your wagmi/viem App'
 author: hughescoin
 keywords:
-  ['build on base', 'viem', 'wagmi', 'frontend', 'onchain app development']
+['build on base', 'viem', 'wagmi', 'frontend', 'onchain app development']
 tags: ['account abstraction']
 difficulty: beginner
 displayed_sidebar: null
+
 ---
 
 # Add Basenames to your onchain app
@@ -650,12 +651,12 @@ To interact with the Base blockchain, you will need to update the wagmi configur
 Update your wagmi.ts file as follows:
 
 ```typescript tile="wagmi.ts"
-'use client';
+"use client";
 
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactNode } from 'react';
-import { http, createConfig, WagmiProvider } from 'wagmi';
-import { base } from 'wagmi/chains';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactNode } from "react";
+import { http, createConfig, WagmiProvider } from "wagmi";
+import { base } from "wagmi/chains";
 
 export const config = createConfig({
   chains: [base],
@@ -686,7 +687,7 @@ Next, we'll create a new directory to house the functions that will resolve and 
 
 In your project folder, create the apis directory and add a basenames.tsx file:
 
-:::note What's happening in the code? 
+:::note What's happening in the code?
 
 `convertReverseNodeToBytes()`: This function is creating the reverse node so we can look up a name given an address. Each address gets its own reverse record in our registry that's created in a deterministic way.
 
@@ -705,9 +706,9 @@ import {
   http,
   keccak256,
   namehash,
-} from 'viem';
-import { base, mainnet } from 'viem/chains';
-import L2ResolverAbi from '@/abis/L2ResolverAbi';
+} from "viem";
+import { base, mainnet } from "viem/chains";
+import L2ResolverAbi from "@/abis/L2ResolverAbi";
 
 // Function to resolve a Basename
 export async function getBasename(address: Address) {
@@ -716,7 +717,7 @@ export async function getBasename(address: Address) {
     const basename = await baseClient.readContract({
       abi: L2ResolverAbi,
       address: BASENAME_L2_RESOLVER_ADDRESS,
-      functionName: 'name',
+      functionName: "name",
       args: [addressReverseNode],
     });
     if (basename) {
@@ -724,7 +725,7 @@ export async function getBasename(address: Address) {
     }
   } catch (error) {
     // Handle the error accordingly
-    console.error('Error resolving Basename:', error);
+    console.error("Error resolving Basename:", error);
   }
 }
 ```
@@ -747,19 +748,19 @@ import {
   getBasename,
   getBasenameAvatar,
   getBasenameTextRecord,
-} from '@/apis/basenames';
-import BasenameDetails from '@/components/BasenameDetails';
-import EthereumProviders from '@/contexts/EthereumProviders';
-import { useAccount } from 'wagmi';
+} from "@/apis/basenames";
+import BasenameDetails from "@/components/BasenameDetails";
+import EthereumProviders from "@/contexts/EthereumProviders";
+import { useAccount } from "wagmi";
 
 // shrek.base.eth
 
-const address = '0x8c8F1a1e1bFdb15E7ed562efc84e5A588E68aD73'; // const account = useAccount(); \n address = account?.address;
+const address = "0x8c8F1a1e1bFdb15E7ed562efc84e5A588E68aD73"; // const account = useAccount(); \n address = account?.address;
 
 async function fetchData() {
   const basename = await getBasename(address);
 
-  if (basename === undefined) throw Error('failed to resolve address to name');
+  if (basename === undefined) throw Error("failed to resolve address to name");
 
   const avatar = await getBasenameAvatar(basename);
 
@@ -786,19 +787,19 @@ export default async function Home() {
 
   return (
     <EthereumProviders>
-      <main className='flex min-h-screen flex-col gap-12 p-24'>
-        <div className='mb-12'>
-          <h1 className='text-xl mb-4'>Server-side rendered:</h1>
-          <ul className='flex flex-col gap-4'>
-            <li className='flex flex-col gap-2'>
+      <main className="flex min-h-screen flex-col gap-12 p-24">
+        <div className="mb-12">
+          <h1 className="text-xl mb-4">Server-side rendered:</h1>
+          <ul className="flex flex-col gap-4">
+            <li className="flex flex-col gap-2">
               <span>Address</span>
               <strong>{address}</strong>
             </li>
-            <li className='flex flex-col gap-2'>
+            <li className="flex flex-col gap-2">
               <span>Basename</span>
               <strong>{data.basename}</strong>
             </li>
-            <li className='flex flex-col gap-2'>
+            <li className="flex flex-col gap-2">
               <span>Avatar</span>
               <strong>
                 <img
@@ -809,18 +810,18 @@ export default async function Home() {
                 />
               </strong>
             </li>
-            <li className='flex flex-col gap-2'>
+            <li className="flex flex-col gap-2">
               <span>Description</span>
               <strong>{data.description}</strong>
             </li>
-            <li className='flex flex-col gap-2'>
+            <li className="flex flex-col gap-2">
               <span>Twitter</span>
               <strong>{data.twitter}</strong>
             </li>
           </ul>
         </div>
         <div>
-          <h1 className='text-xl mb-4'>Client-side rendered:</h1>
+          <h1 className="text-xl mb-4">Client-side rendered:</h1>
           <BasenameDetails address={address} />
         </div>
       </main>
@@ -841,28 +842,28 @@ Congratulations! You've successfully integrated Basenames into your project. By 
 [basenames.tsx]: https://gist.github.com/hughescoin/95b680619d602782396fa954e981adae
 [OnchainKit repo]: https://github.com/coinbase/onchainkit/blob/main/src/identity/utils/convertReverseNodeToBytes.ts
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/thirdweb-sdk.md -->
 
 ---
+
 title: thirdweb SDK
 slug: /tools/thirdweb-sdk
 description: Documentation for using the thirdweb SDK for building web3 applications and interacting with smart contracts on Base. This page covers installation, initialization, and functionalities in various programming languages.
 keywords:
-  [
-    thirdweb SDK,
-    thirdweb,
-    Base,
-    Base mainnet,
-    Base testnet,
-    Base network,
-    web3 applications,
-    smart contracts,
-    React,
-    TypeScript,
-  ]
+[
+thirdweb SDK,
+thirdweb,
+Base,
+Base mainnet,
+Base testnet,
+Base network,
+web3 applications,
+smart contracts,
+React,
+TypeScript,
+]
 hide_table_of_contents: true
+
 ---
 
 # thirdweb SDK
@@ -894,11 +895,13 @@ To get started using the SDK, you must first initialize an instance of `ThirdWeb
 To initialize the SDK with the Base network and get a contract:
 
 ```javascript
-import { Base } from '@thirdweb-dev/chains';
-import { ThirdwebSDK } from '@thirdweb-dev/sdk/evm';
+import { Base } from "@thirdweb-dev/chains";
+import { ThirdwebSDK } from "@thirdweb-dev/sdk/evm";
 
 const sdk = new ThirdwebSDK(Base);
-const contract = await sdk.getContract('0x0000000000000000000000000000000000000000');
+const contract = await sdk.getContract(
+  "0x0000000000000000000000000000000000000000"
+);
 ```
 
 :::info
@@ -908,11 +911,13 @@ The code snippet above uses the [React SDK](https://portal.thirdweb.com/react). 
 If alternatively you'd like to initialize the SDK with Base Sepolia (testnet), use the following code instead:
 
 ```javascript
-import { BaseSepoliaTestnet } from '@thirdweb-dev/chains';
-import { ThirdwebSDK } from '@thirdweb-dev/sdk/evm';
+import { BaseSepoliaTestnet } from "@thirdweb-dev/chains";
+import { ThirdwebSDK } from "@thirdweb-dev/sdk/evm";
 
 const sdk = new ThirdwebSDK(BaseSepoliaTestnet);
-const contract = await sdk.getContract('0x0000000000000000000000000000000000000000');
+const contract = await sdk.getContract(
+  "0x0000000000000000000000000000000000000000"
+);
 ```
 
 :::
@@ -938,18 +943,18 @@ For example, if your contract implements the [ERC721](https://portal.thirdweb.co
 As an example, below is a code snippet that uses [`useOwnedNFTs`](https://portal.thirdweb.com/react/react.useownednfts) hook to get a list of NFTs owned by a single wallet address:
 
 ```javascript
-import { useOwnedNFTs } from '@thirdweb-dev/react';
+import { useOwnedNFTs } from "@thirdweb-dev/react";
 
-const { data, isLoading, error } = useOwnedNFTs(contract, '{{wallet_address}}');
+const { data, isLoading, error } = useOwnedNFTs(contract, "{{wallet_address}}");
 ```
 
 #### Usage
 
 ```javascript
-import { useOwnedNFTs, useContract, useAddress } from '@thirdweb-dev/react';
+import { useOwnedNFTs, useContract, useAddress } from "@thirdweb-dev/react";
 
 // Your smart contract address
-const contractAddress = '{{contract_address}}';
+const contractAddress = "{{contract_address}}";
 
 function App() {
   const address = useAddress();
@@ -967,8 +972,8 @@ If your contract doesn’t use any [extensions](https://portal.thirdweb.com/cont
 Read data on your contract from a connected wallet:
 
 ```javascript
-const { contract } = useContract('{{contract_address}}');
-const { data: myData, isLoading } = useContractRead(contract, 'myFunction');
+const { contract } = useContract("{{contract_address}}");
+const { data: myData, isLoading } = useContractRead(contract, "myFunction");
 ```
 
 ### Writing transactions
@@ -978,35 +983,38 @@ If your contract doesn’t use any [extensions](https://portal.thirdweb.com/cont
 Make transactions on your contract from a connected wallet:
 
 ```javascript
-const { contract } = useContract('{{contract_address}}');
-const { mutateAsync: myFunctionAsync } = useContractWrite(contract, 'myFunction');
-const tx = await myFunctionAsync(['argument1', 'argument2']); // Call the function
+const { contract } = useContract("{{contract_address}}");
+const { mutateAsync: myFunctionAsync } = useContractWrite(
+  contract,
+  "myFunction"
+);
+const tx = await myFunctionAsync(["argument1", "argument2"]); // Call the function
 ```
-
-
 
 <!-- File: ../web/apps/base-docs/docs/tools/web3.md -->
 
 ---
+
 title: web3.js
 slug: /tools/web3
 description: Documentation for using web3.js, a JavaScript library for interacting with EVM-compatible blockchains. This page covers installation, setup, connecting to the Base network and interacting with smart contracts.
 keywords:
-  [
-    web3.js,
-    Base,
-    Base mainnet,
-    Base testnet,
-    Base network,
-    JavaScript,
-    EVM,
-    client library,
-    blockchain,
-    smart contracts,
-    Ethereum,
-    RPC URL,
-  ]
+[
+web3.js,
+Base,
+Base mainnet,
+Base testnet,
+Base network,
+JavaScript,
+EVM,
+client library,
+blockchain,
+smart contracts,
+Ethereum,
+RPC URL,
+]
 hide_table_of_contents: true
+
 ---
 
 # web3.js
@@ -1033,10 +1041,10 @@ Add the following line of code to the top of your file to import web3.js:
 
 ```javascript
 //web3.js v1
-const Web3 = require('web3');
+const Web3 = require("web3");
 
 //web3.js v4
-const { Web3 } = require('web3');
+const { Web3 } = require("web3");
 ```
 
 ## Connecting to Base
@@ -1044,9 +1052,9 @@ const { Web3 } = require('web3');
 You can connect to Base by instantiating a new web3.js `Web3` object with a RPC URL of the Base network:
 
 ```javascript
-const { Web3 } = require('web3');
+const { Web3 } = require("web3");
 
-const web3 = new Web3('https://mainnet.base.org');
+const web3 = new Web3("https://mainnet.base.org");
 ```
 
 :::info
@@ -1121,30 +1129,30 @@ For more information on deploying contracts on Base, see [Deploying a Smart Cont
 
 :::
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/ethers.md -->
 
 ---
+
 title: ethers.js
 slug: /tools/ethers
 description: Documentation for using ethers.js, a JavaScript library for EVM-compatible blockchain interactions. This page covers installation, setup, connecting to the Base network, reading and writing blockchain data, and interacting with smart contracts.
 keywords:
-  [
-    ethers.js,
-    JavaScript library,
-    Base network,
-    Base mainnet,
-    Base testnet,
-    smart contracts,
-    EVM-compatible,
-    blockchain,
-    JsonRpcProvider,
-    Signer,
-    ABI,
-    interacting with smart contract,
-  ]
+[
+ethers.js,
+JavaScript library,
+Base network,
+Base mainnet,
+Base testnet,
+smart contracts,
+EVM-compatible,
+blockchain,
+JsonRpcProvider,
+Signer,
+ABI,
+interacting with smart contract,
+]
 hide_table_of_contents: true
+
 ---
 
 # ethers.js
@@ -1170,7 +1178,7 @@ Before you can start using ethers.js, you need to import it into your project.
 Add the following line of code to the top of your file to import ethers.js:
 
 ```javascript
-const ethers = require('ethers');
+const ethers = require("ethers");
 ```
 
 ## Connecting to Base
@@ -1178,9 +1186,9 @@ const ethers = require('ethers');
 You can connect to Base by instantiating a new ethers.js `JsonRpcProvider` object with a RPC URL of the Base network:
 
 ```javascript
-const ethers = require('ethers');
+const ethers = require("ethers");
 
-const url = 'https://mainnet.base.org';
+const url = "https://mainnet.base.org";
 const provider = new ethers.providers.JsonRpcProvider(url);
 ```
 
@@ -1210,7 +1218,7 @@ In order to write data to the Base network, you need to create a `Signer`.
 You can create a `Signer` by instantiating a new ethers.js `Wallet` object, providing it with a private key and `Provider`.
 
 ```javascript
-const privateKey = 'PRIVATE_KEY';
+const privateKey = "PRIVATE_KEY";
 const signer = new ethers.Wallet(privateKey, provider);
 ```
 
@@ -1262,16 +1270,16 @@ async function getValue() {
 }
 ```
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/registry-api.md -->
 
 ---
+
 title: Onchain Registry API
 slug: /tools/registry-api
 description: Documentation for the Onchain Registry API.
 keywords: [onchain registry, registry API, onchain API, Base registry, Base, Base apps, Base API]
 hide_table_of_contents: true
+
 ---
 
 # Onchain Registry API
@@ -1430,33 +1438,33 @@ This endpoint will display a single Onchain Registry entry that is being activel
 
 We grant third parties a non-exclusive, worldwide, royalty-free license to use the Onchain Registry API solely for the purpose of integrating it into their applications or services. This license does not extend to any data or content accessed through the Onchain API, which remains the sole responsibility of the third party. By using the Onchain Registry API, third parties agree to comply with our license terms and any applicable laws and regulations as set forth in Coinbase Developer Platform Terms of Service. We make no warranties regarding the Onchain Registry API, and users accept all risks associated with its use. The Onchain App Registry API is an Early Access Product per Section 18 of the [Coinbase Developer Platform Terms of Service](https://www.coinbase.com/legal/developer-platform/terms-of-service) and the Coinbase [Prohibited Use Policy](https://www.coinbase.com/legal/prohibited_use), and all terms and conditions therein govern your use of the Onchain Registry API.
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/onramps.md -->
 
 ---
+
 title: Onramps
 slug: /tools/onramps
 description: Documentation for fiat-to-crypto onramps for the Base network.
 keywords:
-  [
-    fiat-to-crypto onramps,
-    crypto onramp,
-    onramps,
-    Base,
-    Base network,
-    cryptocurrency,
-    ETH on Base,
-    payment gateway,
-    payments,
-    fiat to crypto,
-    fiat,
-    Coinbase Onramp,
-    MoonPay,
-    Onramp,
-    Alchemy Pay
-  ]
+[
+fiat-to-crypto onramps,
+crypto onramp,
+onramps,
+Base,
+Base network,
+cryptocurrency,
+ETH on Base,
+payment gateway,
+payments,
+fiat to crypto,
+fiat,
+Coinbase Onramp,
+MoonPay,
+Onramp,
+Alchemy Pay
+]
 hide_table_of_contents: true
+
 ---
 
 # Onramps
@@ -1499,34 +1507,34 @@ hide_table_of_contents: true
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/data-indexers.md -->
 
 ---
+
 title: Data Indexers
 slug: /tools/data-indexers
 description: Documentation for data indexing platforms for Base network.
 keywords:
-  [
-    data indexers,
-    data indexer,
-    indexing data,
-    Base network,
-    Base,
-    Base mainnet,
-    Base testnet,
-    blockchain data,
-    Covalent,
-    Moralis,
-    Subsquid,
-    SubQuery,
-    The Graph,
-    GraphQL,
-    EVM chains,
-    GhostGraph,
-  ]
+[
+data indexers,
+data indexer,
+indexing data,
+Base network,
+Base,
+Base mainnet,
+Base testnet,
+blockchain data,
+Covalent,
+Moralis,
+Subsquid,
+SubQuery,
+The Graph,
+GraphQL,
+EVM chains,
+GhostGraph,
+]
 hide_table_of_contents: true
+
 ---
 
 # Data Indexers
@@ -1578,6 +1586,7 @@ To get started, [sign up](https://www.covalenthq.com/platform/?utm_source=base&u
 ---
 
 ## DipDup
+
 [DipDup](https://dipdup.io) is a Python framework for building smart contract indexers. It helps developers focus on business logic instead of writing a boilerplate to store and serve data. DipDup-based indexers are selective, which means only required data is requested. This approach allows to achieve faster indexing times and decreased load on underlying APIs.
 
 To get started, visit the [documentation](https://dipdup.io/docs/supported-networks/base) or follow the [quickstart](https://dipdup.io/docs/quickstart-evm) guide.
@@ -1731,33 +1740,33 @@ To get started, visit the [documentation](https://docs.flair.dev) or clone the [
 - [Base Mainnet](https://docs.flair.dev/reference/manifest.yml)
 - [Base Sepolia](https://docs.flair.dev/reference/manifest.yml) (Testnet)
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/foundry.md -->
 
 ---
+
 title: Foundry
 slug: /tools/foundry
 description: Documentation for Foundry, a toolchain for smart contract development. Provides instructions on deploying and verifying contracts on Base's mainnet and testnet using Foundry.
 keywords:
-  [
-    Foundry,
-    Forge,
-    Foundry Book,
-    smart contract development,
-    toolchain,
-    Base,
-    Base mainnet,
-    Base testnet,
-    Base network,
-    RPC URL,
-    chain id,
-    deploying contracts,
-    verifying contracts,
-    mainnet,
-    testnet,
-  ]
+[
+Foundry,
+Forge,
+Foundry Book,
+smart contract development,
+toolchain,
+Base,
+Base mainnet,
+Base testnet,
+Base network,
+RPC URL,
+chain id,
+deploying contracts,
+verifying contracts,
+mainnet,
+testnet,
+]
 hide_table_of_contents: true
+
 ---
 
 # Foundry
@@ -1804,33 +1813,33 @@ forge create <CONTRACT_NAME> --rpc-url=https://sepolia.base.org/
 forge verify-contract <CONTRACT_ADDRESS> <CONTRACT_NAME> --chain-id 84532
 ```
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/account-abstraction.md -->
 
 ---
+
 title: Account Abstraction
 slug: /tools/account-abstraction
 description: Documentation for Account Abstraction toolkits and solutions for apps built on Base.
 keywords:
-  [
-    account abstraction,
-    AA,
-    smart accounts,
-    smart contract accounts,
-    onboarding,
-    paymasters,
-    bundlers,
-    smart wallets,
-    smart contract wallets,
-    Alchemy,
-    Biconomy,
-    Stackup,
-    WalletKit,
-    Zerodev,
-    Openfort,
-  ]
+[
+account abstraction,
+AA,
+smart accounts,
+smart contract accounts,
+onboarding,
+paymasters,
+bundlers,
+smart wallets,
+smart contract wallets,
+Alchemy,
+Biconomy,
+Stackup,
+WalletKit,
+Zerodev,
+Openfort,
+]
 hide_table_of_contents: true
+
 ---
 
 # Account Abstraction
@@ -1880,6 +1889,7 @@ The Coinbase Developer Platform [Account Abstraction Kit](https://www.coinbase.c
 ---
 
 ## thirdweb
+
 [thirdweb](https://portal.thirdweb.com/typescript/v5/account-abstraction/get-started) offers the complete toolkit to leverage account abstraction technology to enable seamless user experiences for your users. This includes Account Factory contracts that let your users spin up Smart Accounts, Bundler for UserOps support, and Paymaster to enable gas sponsorships.
 
 ---
@@ -1900,36 +1910,36 @@ WalletKit is compatible with most EVM chains, including Base. You can check out 
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/node-providers.md -->
 
 ---
+
 title: Node Providers
 slug: /tools/node-providers
 description: Documentation for Node Providers for the Base network. Including details on their services, supported networks, and pricing plans.
 keywords:
-  [
-    Node Providers,
-    Base,
-    Base network,
-    Base node,
-    hosted nodes,
-    archival nodes,
-    RPC,
-    RPC node,
-    RPC URL,
-    RPC endpoints,
-    blockchain services,
-    blockchain infrastructure,
-    developer tools,
-    API,
-    mainnet,
-    testnet,
-    pricing plans,
-    Web3 infrastructure,
-  ]
+[
+Node Providers,
+Base,
+Base network,
+Base node,
+hosted nodes,
+archival nodes,
+RPC,
+RPC node,
+RPC URL,
+RPC endpoints,
+blockchain services,
+blockchain infrastructure,
+developer tools,
+API,
+mainnet,
+testnet,
+pricing plans,
+Web3 infrastructure,
+]
 hide_table_of_contents: true
+
 ---
 
 # Node Providers
@@ -2110,6 +2120,7 @@ hide_table_of_contents: true
 ---
 
 ## RockX
+
 [RockX](https://access.rockx.com) offers a global blockchain node network and developer tools for onchain innovation. Start with our free [Base RPC](https://access.rockx.com/product/base-blockchain-api-for-web3-builders) to access institutional-grade solutions.
 
 #### Supported Networks
@@ -2170,31 +2181,31 @@ hide_table_of_contents: true
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/bridges-mainnet.md -->
 
 ---
+
 title: Superchain Bridges
 slug: /tools/bridges
 description: Documentation for bridging assets to Base. This page covers how to bridge ETH and ERC-20s between Ethereum (L1) and Base along with essential information.
 keywords:
-  [
-    Base,
-    Base network,
-    bridging,
-    bridge to Base,
-    bridge ETH,
-    bridge ETH to Base,
-    Base Bridge,
-    Wormhole Token Bridge,
-    Ethereum Mainnet,
-    Base Mainnet,
-    ETH,
-    ERC-20 tokens,
-    asset bridging,
-  ]
+[
+Base,
+Base network,
+bridging,
+bridge to Base,
+bridge ETH,
+bridge ETH to Base,
+Base Bridge,
+Wormhole Token Bridge,
+Ethereum Mainnet,
+Base Mainnet,
+ETH,
+ERC-20 tokens,
+asset bridging,
+]
 hide_table_of_contents: true
+
 ---
 
 # Superchain Bridges
@@ -2257,16 +2268,16 @@ code to withdraw the assets.
 
 ```
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/registry-faq.md -->
 
 ---
+
 title: Onchain Registry FAQ
 slug: /tools/registry-faq
 description: Frequently asked questions for the Onchain Registry.
 keywords: [onchain registry, registry FAQ, Base registry, Base, Base apps]
 hide_table_of_contents: true
+
 ---
 
 # Onchain Registry FAQ
@@ -2302,31 +2313,31 @@ We offer an Onchain Registry API that gives users the ability to display Onchain
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/hardhat.md -->
 
 ---
+
 title: Hardhat
 slug: /tools/hardhat
 description: Documentation for configuring Hardhat for smart contract development on Base, including setup instructions for mainnet, testnet, and local development environments.
 keywords:
-  [
-    Hardhat,
-    Base,
-    Base network,
-    Base mainnet,
-    Base testnet,
-    hardhat config,
-    hardhat configuration,
-    Ethereum development,
-    smart contract,
-    deployment,
-    mainnet,
-    testnet,
-    local development,
-  ]
+[
+Hardhat,
+Base,
+Base network,
+Base mainnet,
+Base testnet,
+hardhat config,
+hardhat configuration,
+Ethereum development,
+smart contract,
+deployment,
+mainnet,
+testnet,
+local development,
+]
 hide_table_of_contents: true
+
 ---
 
 # Hardhat
@@ -2373,17 +2384,17 @@ For a complete guide on using Hardhat to deploy contracts on Base, see [Deployin
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/basenames-faq.md -->
 
 ---
+
 title: Basenames FAQ
 slug: /tools/basenames-faq
 description: 'Frequently asked questions on basenames.'
 keywords: ['basenames', 'faq']
 tags: ['basenames']
 displayed_sidebar: null
+
 ---
 
 ## FAQ
@@ -2491,31 +2502,31 @@ Follow our step-by-step [guide] to get started. While Basenames supports all fra
 
 [guide]: https://docs.base.org/tutorials/add-frames-to-basename
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/block-explorers.md -->
 
 ---
+
 title: Block Explorers
 slug: /tools/block-explorers
 description: Documentation for block explorers for the Base network.
 keywords:
-  [
-    block explorers,
-    Base block explorer,
-    Base block explorers,
-    Base blockchain,
-    Base network,
-    Base mainnet,
-    Base testnet,
-    smart contract analysis,
-    transaction tracking,
-    transaction details,
-    Blockscout,
-    Etherscan,
-    Basescan,
-  ]
+[
+block explorers,
+Base block explorer,
+Base block explorers,
+Base blockchain,
+Base network,
+Base mainnet,
+Base testnet,
+smart contract analysis,
+transaction tracking,
+transaction details,
+Blockscout,
+Etherscan,
+Basescan,
+]
 hide_table_of_contents: true
+
 ---
 
 # Block Explorers
@@ -2591,38 +2602,38 @@ With the [Tenderly](https://tenderly.co/) developer explorer you can get unparal
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/oracles.md -->
 
 ---
+
 title: Oracles
 slug: /tools/oracles
 description: Documentation for various blockchain oracles for Base. Including support for price feeds and verifiable random functions (VRF).
 keywords:
-  [
-    Oracles,
-    Oracle,
-    Base,
-    Base Mainnet,
-    Base Testnet,
-    Base network,
-    Supra,
-    Chainlink,
-    Chronicle,
-    ORA,
-    Pyth,
-    VRF,
-    Gelato VRF,
-    Gelato verifiable random function,
-    verifiable random function,
-    generate random numbers,
-    RNG,
-    true randomness,
-    price feeds,
-    data feeds,
-  ]
+[
+Oracles,
+Oracle,
+Base,
+Base Mainnet,
+Base Testnet,
+Base network,
+Supra,
+Chainlink,
+Chronicle,
+ORA,
+Pyth,
+VRF,
+Gelato VRF,
+Gelato verifiable random function,
+verifiable random function,
+generate random numbers,
+RNG,
+true randomness,
+price feeds,
+data feeds,
+]
 hide_table_of_contents: true
+
 ---
 
 # Oracles
@@ -2779,30 +2790,30 @@ Visit the Supra [documentation](https://supraoracles.com/docs/) to learn more ab
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/thirdweb-cli.md -->
 
 ---
+
 title: thirdweb CLI
 slug: /tools/thirdweb-cli
 description: Documentation for using the thirdweb CLI for creating, deploying, and publishing smart contracts and web3 applications on the Base network, including detailed instructions and options for project creation and deployment.
 keywords:
-  [
-    thirdweb CLI,
-    thirdweb,
-    CLI,
-    Base,
-    Base mainnet,
-    Base testnet,
-    Base network,
-    smart contracts,
-    deploy smart contract,
-    test smart contract,
-    debug smart contract,
-    web3 applications,
-  ]
+[
+thirdweb CLI,
+thirdweb,
+CLI,
+Base,
+Base mainnet,
+Base testnet,
+Base network,
+smart contracts,
+deploy smart contract,
+test smart contract,
+debug smart contract,
+web3 applications,
+]
 hide_table_of_contents: true
+
 ---
 
 # thirdweb CLI
@@ -2875,39 +2886,39 @@ npx thirdweb publish
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/cross-chain.md -->
 
 ---
+
 title: Cross-chain
 slug: /tools/cross-chain
 description: Documentation for cross-chain communication and messaging on the Base network. This page covers integrating tools like LayerZero with Base for web3 transactions, cross-chain messaging, and secure blockchain communication.
 keywords:
-  [
-    cross-chain,
-    cross chain,
-    crosschain messaging,
-    cross-chain messaging,
-    omnichain,
-    omni-chain,
-    superchain,
-    Chainlink CCIP,
-    CCIP,
-    LayerZero,
-    Axelar,
-    Crossmint,
-    Wormhole,
-    web3 transactions,
-    blockchain communication,
-    Base Mainnet,
-    Base Testnet,
-    interchain connectivity,
-    blockchain interoperability,
-    cross-chain transactions,
-    cross-chain payments,
-  ]
+[
+cross-chain,
+cross chain,
+crosschain messaging,
+cross-chain messaging,
+omnichain,
+omni-chain,
+superchain,
+Chainlink CCIP,
+CCIP,
+LayerZero,
+Axelar,
+Crossmint,
+Wormhole,
+web3 transactions,
+blockchain communication,
+Base Mainnet,
+Base Testnet,
+interchain connectivity,
+blockchain interoperability,
+cross-chain transactions,
+cross-chain payments,
+]
 hide_table_of_contents: true
+
 ---
 
 # Cross-chain
@@ -2987,28 +2998,28 @@ For more information on integrating Wormhole, visit their [documentation](https:
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/viem.md -->
 
 ---
+
 title: viem
 slug: /tools/viem
 description: Documentation for using Viem, a TypeScript interface for EVM-compatible blockchains. This page covers installation, setup, and various functionalities such as reading and writing blockchain data and interacting with smart contracts on Base.
 keywords:
-  [
-    viem,
-    Base,
-    Base mainnet,
-    Base testnet,
-    Ethereum,
-    smart contracts,
-    blockchain,
-    RPC URL,
-    JavaScript,
-    TypeScript,
-  ]
+[
+viem,
+Base,
+Base mainnet,
+Base testnet,
+Ethereum,
+smart contracts,
+blockchain,
+RPC URL,
+JavaScript,
+TypeScript,
+]
 hide_table_of_contents: true
+
 ---
 
 # viem
@@ -3038,8 +3049,8 @@ npm install --save viem
 Before you can start using viem, you need to setup a [Client](https://viem.sh/docs/clients/intro.html) with a desired [Transport](https://viem.sh/docs/clients/intro.html) and [Chain](https://viem.sh/docs/chains/introduction).
 
 ```javascript
-import { createPublicClient, http } from 'viem';
-import { base } from 'viem/chains';
+import { createPublicClient, http } from "viem";
+import { base } from "viem/chains";
 
 const client = createPublicClient({
   chain: base,
@@ -3102,13 +3113,13 @@ To use Base Sepolia (testnet), replace `base` with `baseSepolia`.
 You can use viem to interact with a smart contract on Base by creating a `Contract` instance using [`getContract`](https://viem.sh/docs/contract/getContract.html) and passing it the contract ABI, contract address, and [Public](https://viem.sh/docs/clients/public.html) and/or [Wallet](https://viem.sh/docs/clients/wallet.html) Client:
 
 ```javascript
-import { getContract } from 'viem';
-import { wagmiAbi } from './abi';
-import { publicClient } from './client';
+import { getContract } from "viem";
+import { wagmiAbi } from "./abi";
+import { publicClient } from "./client";
 
 // 1. Create contract instance
 const contract = getContract({
-  address: 'CONTRACT_ADDRESS',
+  address: "CONTRACT_ADDRESS",
   abi: wagmiAbi,
   publicClient,
 });
@@ -3123,36 +3134,36 @@ const result = await contract.read.totalSupply();
 
 :::
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/onboarding.md -->
 
 ---
+
 title: User Onboarding
 slug: /tools/onboarding
 description: Documentation for various ways to onboard users in your apps on Base.
 keywords:
-  [
-    Wallets,
-    embedded wallets,
-    Base,
-    Base Mainnet,
-    Base Testnet,
-    Base network,
-    onboard,
-    onboarding,
-    Privy,
-    Crossmint,
-    Dynamic,
-    Particle Network,
-    Sequence,
-    WalletKit,
-    user wallet,
-    accounts,
-    user account,
-    openfort,
-  ]
+[
+Wallets,
+embedded wallets,
+Base,
+Base Mainnet,
+Base Testnet,
+Base network,
+onboard,
+onboarding,
+Privy,
+Crossmint,
+Dynamic,
+Particle Network,
+Sequence,
+WalletKit,
+user wallet,
+accounts,
+user account,
+openfort,
+]
 hide_table_of_contents: true
+
 ---
 
 # User Onboarding
@@ -3175,7 +3186,7 @@ hide_table_of_contents: true
 
 [Openfort](https://openfort.xyz) is an infrastructure provider designed to simplify the development of games and gamified experiences across their suite of API endpoints. Authenticated users can instantly access the embedded, non-custodial [smart account](https://www.openfort.xyz/docs/guides/accounts/smart) natively in the game and sign blockchain transactions with one button. The Openfort platform is compatible with most EVM chains, including Base.
 
-Use [Auth Guide](https://www.openfort.xyz/docs/guides/auth/overview) to allow several onboarding methods into your game regardless of the platform. 
+Use [Auth Guide](https://www.openfort.xyz/docs/guides/auth/overview) to allow several onboarding methods into your game regardless of the platform.
 
 ---
 
@@ -3201,7 +3212,7 @@ You can [get started with Privy here](https://docs.privy.io/guide/quickstart), a
 
 ## thirdweb
 
-[thirdweb](https://thirdweb.com/) is the full stack open source web3 solution for bringing web3 into ANY consumer application on ANY platform. Utilize our wide range of sdks on web, mobile, Unity/Unreal or through our cloud hosted engine service! Connect your users with EOA or social logins, create contracts for marketplaces or tokenize in-game items, handle thousands of transactions to build apps that scale, and provide a fiat onramper for your users. 
+[thirdweb](https://thirdweb.com/) is the full stack open source web3 solution for bringing web3 into ANY consumer application on ANY platform. Utilize our wide range of sdks on web, mobile, Unity/Unreal or through our cloud hosted engine service! Connect your users with EOA or social logins, create contracts for marketplaces or tokenize in-game items, handle thousands of transactions to build apps that scale, and provide a fiat onramper for your users.
 
 ---
 
@@ -3215,31 +3226,31 @@ You can check out the [WalletKit documentation here](https://docs.walletkit.com)
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/network-faucets.md -->
 
 ---
+
 title: Network Faucets
 slug: /tools/network-faucets
 description: Documentation for Testnet Faucets for the Base network. Details how to obtain Base testnet ETH.
 keywords:
-  [
-    network faucets,
-    Base Sepolia,
-    testnet ETH,
-    Base testnet,
-    Coinbase Faucet,
-    cdp faucet,
-    Coinbase Developer Platform Faucet,
-    Superchain Faucet,
-    Bware Labs Faucet,
-    QuickNode Faucet,
-    LearnWeb3 Faucet,
-    Ethereum Mainnet,
-    testnet resources,
-  ]
+[
+network faucets,
+Base Sepolia,
+testnet ETH,
+Base testnet,
+Coinbase Faucet,
+cdp faucet,
+Coinbase Developer Platform Faucet,
+Superchain Faucet,
+Bware Labs Faucet,
+QuickNode Faucet,
+LearnWeb3 Faucet,
+Ethereum Mainnet,
+testnet resources,
+]
 hide_table_of_contents: true
+
 ---
 
 # Network Faucets
@@ -3342,11 +3353,10 @@ Each wallet is restricted to receiving 0.5 ETH from this faucet every 24 hours.
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tools/basenames-onchainkit-tutorial.md -->
 
 ---
+
 title: Basenames + OnchainKit Tutorial
 slug: /basenames-tutorial-with-onchainkit
 description: 'A tutorial that teaches how to integrate Basenames to your wagmi/viem App using OnchainKit'
@@ -3355,6 +3365,7 @@ keywords: ['build on base', 'viem', 'wagmi', 'frontend', 'onchain app developmen
 tags: ['account abstraction']
 difficulty: beginner
 displayed_sidebar: null
+
 ---
 
 # Add Basenames to your wagmi/viem App using OnchainKit
@@ -3407,9 +3418,9 @@ In this section, we will configure your wagmi project to support the Base blockc
 Start by importing the `base` and `baseSepolia` chains into your wagmi config. Navigate to `src/wagmi.ts` and update the file as follows:
 
 ```typescript title="wagmi.ts"
-import { http, cookieStorage, createConfig, createStorage } from 'wagmi';
-import { base, baseSepolia } from 'wagmi/chains';
-import { coinbaseWallet, injected } from 'wagmi/connectors';
+import { http, cookieStorage, createConfig, createStorage } from "wagmi";
+import { base, baseSepolia } from "wagmi/chains";
+import { coinbaseWallet, injected } from "wagmi/connectors";
 
 export function getConfig() {
   return createConfig({
@@ -3417,8 +3428,8 @@ export function getConfig() {
     connectors: [
       injected(),
       coinbaseWallet({
-        appName: 'Create Wagmi',
-        preference: 'smartWalletOnly',
+        appName: "Create Wagmi",
+        preference: "smartWalletOnly",
       }),
     ],
     storage: createStorage({
@@ -3432,7 +3443,7 @@ export function getConfig() {
   });
 }
 
-declare module 'wagmi' {
+declare module "wagmi" {
   interface Register {
     config: ReturnType<typeof getConfig>;
   }
@@ -3448,12 +3459,12 @@ Ensure Chain is Set to Base Be sure to set the `chain={base}` parameter; otherwi
 :::
 
 ```typescript title="src/components/basename.tsx"
-'use client';
-import React from 'react';
-'use client';
-import React from 'react';
-import { Avatar, Identity, Name, Address } from '@coinbase/onchainkit/identity';
-import { base } from 'viem/chains';
+"use client";
+import React from "react";
+("use client");
+import React from "react";
+import { Avatar, Identity, Name, Address } from "@coinbase/onchainkit/identity";
+import { base } from "viem/chains";
 
 interface DisplayBasenameProps {
   address: `0x${string}` | undefined;
@@ -3485,12 +3496,12 @@ Next, we’ll integrate the newly created Basenames component into your applicat
 Here’s an example of how to modify your header component to include the Basenames component:
 
 ```typescript title="src/app/page.tsx"
-'use client';
-import Footer from 'src/components/Footer';
-import { ONCHAINKIT_LINK } from 'src/links';
-import { useAccount } from 'wagmi';
-import LoginButton from '../components/LoginButton';
-import { Basenames } from '../components/basename';
+"use client";
+import Footer from "src/components/Footer";
+import { ONCHAINKIT_LINK } from "src/links";
+import { useAccount } from "wagmi";
+import LoginButton from "../components/LoginButton";
+import { Basenames } from "../components/basename";
 
 export default async function Page() {
   const { address } = useAccount();
@@ -3500,14 +3511,19 @@ export default async function Page() {
     <div className="flex h-full w-96 max-w-full flex-col px-1 md:w-[1008px]">
       <section className="mb-6 mt-6 flex w-full flex-col md:flex-row">
         <div className="flex w-full flex-row items-center justify-between gap-2 md:gap-0">
-          <a href={SUPERCOOL_APP_LINK} title="Supercool App" target="_blank" rel="noreferrer">
+          <a
+            href={SUPERCOOL_APP_LINK}
+            title="Supercool App"
+            target="_blank"
+            rel="noreferrer"
+          >
             <h1 className="text-xl font-normal not-italic tracking-[-1.2px] text-indigo-600">
               Supercool App
             </h1>
           </a>
           <div className="flex items-center gap-3">
             {!address && <LoginButton />} {/*Connect wallet button*/}
-            {account.status === 'connected' && (
+            {account.status === "connected" && (
               <div>
                 <Basenames address={account.addresses?.[0]} />
               </div>
@@ -3539,28 +3555,28 @@ That’s it! You’ve successfully integrated Basenames into your wagmi/viem app
 [tanstack]: https://tanstack.com
 [other wallets]: https://help.coinbase.com/en/wallet/getting-started/smart-wallet
 
-
-
 <!-- File: ../web/apps/base-docs/docs/overview.md -->
 
 ---
+
 title: About Base
 slug: /
 description: An overview of Base, an Ethereum L2 platform incubated by Coinbase, focusing on its secure, low-cost, and builder-friendly features, along with its commitment to decentralization and accessibility for the global cryptoeconomy.
 keywords:
-  [
-    Base,
-    Ethereum L2,
-    Coinbase,
-    decentralization,
-    cryptoeconomy,
-    EVM,
-    blockchain,
-    OP Stack,
-    Optimism,
-    decentralized apps,
-  ]
+[
+Base,
+Ethereum L2,
+Coinbase,
+decentralization,
+cryptoeconomy,
+EVM,
+blockchain,
+OP Stack,
+Optimism,
+decentralized apps,
+]
 hide_table_of_contents: true
+
 ---
 
 # About Base
@@ -3587,15 +3603,15 @@ Base is built on the MIT-licensed [OP Stack](https://stack.optimism.io/), in col
 
 Base is an easy way for decentralized apps to leverage Coinbase's products and distribution. Seamless Coinbase integrations, easy fiat onramps, and access to millions of verified users in the Coinbase ecosystem.
 
-
-
 <!-- File: ../web/apps/base-docs/docs/privacy-policy.md -->
 
 ---
+
 title: Privacy Policy
 slug: /privacy-policy
 description: The Privacy Policy for Base. Covers how we collect, use, and share personal information of users and developers through our services, including legal bases and data retention.
 hide_table_of_contents: true
+
 ---
 
 # Base Global Privacy Policy
@@ -3644,13 +3660,13 @@ We collect the following personal information when providing the Services:
 
 We may use your personal information for the following purposes or as otherwise described at the time of collection. If you reside outside the United Kingdom or European Economic Area (“**EEA”)**, the legal bases on which we rely in your country may differ from those listed below.
 
-|                                                                                                                                                                          |                                                            |                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- | --------------------- |
-| **Purpose**                                                                                                                                                              | **Information Used**                                       | **Our Legal Basis**   |
+|                                                                                                                                                                          |                                                             |                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- | --------------------- |
+| **Purpose**                                                                                                                                                              | **Information Used**                                        | **Our Legal Basis**   |
 | To provide you with the Base Services We use certain information that is necessary to conclude and perform our Terms of Service or other relevant contract(s) with you.  | Wallet Address Blockchain Data                              | Contractual Necessity |
 | To promote the safety, security and integrity of our Services                                                                                                            | Basic User Information Information from Analytics Providers | Contractual Necessity |
-| To allow Users or Developers to build more effectively on the Base platform                                                                                              | Error Tracking Data                                        | Legitimate Interests  |
-| To send you Base Forms for marketing and product development                                                                                                             | Basic User Information                                     | Legitimate Interests  |
+| To allow Users or Developers to build more effectively on the Base platform                                                                                              | Error Tracking Data                                         | Legitimate Interests  |
+| To send you Base Forms for marketing and product development                                                                                                             | Basic User Information                                      | Legitimate Interests  |
 
 # 3. HOW AND WHY WE SHARE YOUR INFORMATION 
 
@@ -3697,17 +3713,17 @@ We’re constantly trying to improve our Services, so we may need to change this
 
 Coinbase Technologies, Inc., 251 Little Falls Drive, City of Wilmington, County of New Castle, Delaware 19808, acts as controller of your personal data.
 
-
-
 <!-- File: ../web/apps/base-docs/docs/security/bounty.md -->
 
 ---
+
 title: Bug bounty
 slug: /security/bounty
 description: The Base bug bounty program
 keywords:
-  [Base, HackerOne, bug bounty program, bug report, Base network, Bedrock, Optimism, open source]
+[Base, HackerOne, bug bounty program, bug report, Base network, Bedrock, Optimism, open source]
 hide_table_of_contents: true
+
 ---
 
 # Bug bounty program
@@ -3720,28 +3736,28 @@ In line with our strategy of being the safest way for users to access crypto:
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/docs/security/report.md -->
 
 ---
+
 title: Report vulnerability
 slug: /security/report
 description: The Base procedures for reporting vulnerabilities.
 keywords:
-  [
-    Base,
-    report vulnerability,
-    cybersecurity,
-    HackerOne,
-    Base network,
-    Bedrock,
-    Optimism,
-    vulnerability reporting,
-    crypto security,
-    open source,
-  ]
+[
+Base,
+report vulnerability,
+cybersecurity,
+HackerOne,
+Base network,
+Bedrock,
+Optimism,
+vulnerability reporting,
+crypto security,
+open source,
+]
 hide_table_of_contents: true
+
 ---
 
 # Reporting vulnerabilities
@@ -3754,29 +3770,29 @@ For more information on reporting vulnerabilities and our HackerOne bug bounty p
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/docs/security/app-blocklist.md -->
 
 ---
+
 title: How to avoid getting your app flagged as malicious
 slug: /security/app-blocklist
 description: The Base bug bounty program and procedures for reporting vulnerabilities.
 keywords:
-  [
-    Base,
-    Coinbase Wallet,
-    dapp,
-    app,
-    malicious warning,
-    browser,
-    dapp developer,
-    app developer,
-    best practice,
-    unblock,
-    remove warning,
-  ]
+[
+Base,
+Coinbase Wallet,
+dapp,
+app,
+malicious warning,
+browser,
+dapp developer,
+app developer,
+best practice,
+unblock,
+remove warning,
+]
 hide_table_of_contents: true
+
 ---
 
 # How to avoid getting your app flagged as malicious
@@ -3810,15 +3826,15 @@ By following these recommendations, you’ll significantly reduce the chances of
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/docs/cookie-policy.mdx -->
 
 ---
+
 title: Cookie Policy
 slug: /cookie-policy
 description: Policy explaining how Base uses cookies on our website.
 hide_table_of_contents: true
+
 ---
 
 # Base Cookie Policy
@@ -3911,28 +3927,28 @@ We may update this Cookie Policy from time to time to reflect, for example, chan
 the cookies we use or for other operational, legal or regulatory reasons. You can also
 revisit this page if you wish to keep yourself informed.
 
-
-
 <!-- File: ../web/apps/base-docs/docs/notices/decomissioning-public-geth-archive-snapshots.md -->
 
 ---
+
 title: Decommissioning Public Geth Archive Snapshots
 slug: /decommissioning-public-geth-archive-snapshots
 description: Public Geth archive snapshots were decommissioned on December 15th, 2024.
 keywords:
-  [
-    Geth,
-    Archive Node,
-    Node Snapshots,
-    Ethereum,
-    Infrastructure,
-    Reth,
-    Snapshots,
-    Base Node,
-    Beacon Endpoint,
-    OP Stack,
-  ]
+[
+Geth,
+Archive Node,
+Node Snapshots,
+Ethereum,
+Infrastructure,
+Reth,
+Snapshots,
+Base Node,
+Beacon Endpoint,
+OP Stack,
+]
 hide_table_of_contents: true
+
 ---
 
 # Decommissioning Public Geth Archive Snapshots
@@ -3947,31 +3963,31 @@ If you need continued Geth support, we would advise that you maintain your own s
 
 If you have any questions or would like assistance, please reach out to us on [Discord](https://base.org/discord) or [GitHub](https://github.com/base-org/base-node).
 
-
-
 <!-- File: ../web/apps/base-docs/docs/using-base.md -->
 
 ---
+
 title: Using Base
 sidebar_position: 1
 slug: /using-base
 description: 'How to integrate Base with popular wallets like Coinbase Wallet and MetaMask, covering both mainnet and testnet configurations.'
 keywords:
-  [
-    'Base',
-    'Base wallet',
-    'Coinbase Wallet',
-    'MetaMask',
-    'EVM-compatible wallets',
-    'network configuration',
-    'Base mainnet',
-    'Base testnet',
-    'Sepolia',
-    'cryptocurrency wallet setup',
-    'Base wallet setup',
-    'add Base network',
-  ]
+[
+'Base',
+'Base wallet',
+'Coinbase Wallet',
+'MetaMask',
+'EVM-compatible wallets',
+'network configuration',
+'Base mainnet',
+'Base testnet',
+'Sepolia',
+'cryptocurrency wallet setup',
+'Base wallet setup',
+'add Base network',
+]
 hide_table_of_contents: true
+
 ---
 
 # Using Base with your wallet
@@ -4065,15 +4081,15 @@ You should now be able to connect to the Base testnet by selecting it from the n
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/docs/terms-of-service.md -->
 
 ---
+
 title: Terms of Service
 slug: /terms-of-service
 description: The Terms of Service for using Base, a layer-two optimistic rollup on Ethereum.
 hide_table_of_contents: true
+
 ---
 
 # Sequencer, Testnet, Basenames Interface Terms
@@ -4234,29 +4250,29 @@ As an illustration only, the following is a summary of some of the terms of the 
 
 If you do not reside in the United States or Canada, the Arbitration Agreement in Appendix 1 does not apply to you and you may resolve any claim you have with us relating to, arising out of, or in any way in connection with our Terms, us, or our Services in a court of competent jurisdiction.
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tokens/token-list.md -->
 
 ---
+
 title: Bridging an L1 token to Base
 slug: /tokens/list
 description: How to submit ERC-20 tokens for bridging between Ethereum and Base as a token issuer.
 keywords:
-  [
-    Base Token List,
-    ERC-20 tokens,
-    Ethereum,
-    Base Mainnet,
-    Base Bridge,
-    token bridging,
-    token submission,
-    Optimism Superchain,
-    token deployment,
-    add token to Base,
-    Superchain,
-  ]
+[
+Base Token List,
+ERC-20 tokens,
+Ethereum,
+Base Mainnet,
+Base Bridge,
+token bridging,
+token submission,
+Optimism Superchain,
+token deployment,
+add token to Base,
+Superchain,
+]
 hide_table_of_contents: true
+
 ---
 
 # The Base Token List
@@ -4283,28 +4299,28 @@ Follow the instructions in the [GitHub repository](https://github.com/ethereum-o
 
 Reviews are regularly conducted by the Base team and you should receive a reply within 24-72 hours (depending on if the PR is opened on a week day, weekend or holiday).
 
-
-
 <!-- File: ../web/apps/base-docs/docs/tokens/wallet.md -->
 
 ---
+
 title: Adding tokens to Coinbase Wallet
 slug: /tokens/wallet
 description: 'A simple step by step guide to ensure ERC-20 tokens show immediately on Coinbase Wallet once deployed.'
 keywords:
-  [
-    'ERC-20',
-    'token',
-    'memecoin',
-    'Base',
-    'Coinbase Wallet',
-    'build on base',
-    'tokens',
-    'token issuer',
-    'meme coin',
-    'swaps',
-  ]
+[
+'ERC-20',
+'token',
+'memecoin',
+'Base',
+'Coinbase Wallet',
+'build on base',
+'tokens',
+'token issuer',
+'meme coin',
+'swaps',
+]
 hide_table_of_contents: true
+
 ---
 
 # How to ensure ERC-20 tokens are immediately swappable in Coinbase Wallet
@@ -4336,6 +4352,7 @@ Once your ERC-20 contract is deployed, your asset is swappable instantly on Coin
 Prepare a high-resolution image of your token's logo. Ensure it is clear, identifiable, and representative of your token.
 
 ### Step 3: List your cryptocurrency on a listing aggregator
+
 ##### **Note:** At this time, being listed and verified on CoinMarketCap is the best way to ensure your token’s name, image, price chart all show up on Coinbase Wallet.
 
 You can pay to be listed AND **verified** on CoinMarketCap following these [instructions](https://support.coinmarketcap.com/hc/en-us/articles/360043659351-Listings-Criteria).
@@ -4355,7 +4372,9 @@ Your token must be listed and marked as verified on CoinMarketCap for the price 
 If the above guidance doesn’t resolve your issue, please submit more information using this [Deform](https://app.deform.cc/form/a331da5a-447b-43e8-b636-ea3b925e115a/).
 
 # Sharing your token
+
 ### Custom trading links
+
 By sharing a unique link to your token’s asset page, your community can more easily interact with your token.
 
 How to get your custom link:
@@ -4368,14 +4387,14 @@ How to get your custom link:
 New assets with low liquidity may result in failed swaps or may result in a user receiving less of the destination token due to slippage. An important responsibility of the token creator is to communicate to the community these risks.
 :::
 
-
-
 <!-- File: ../web/apps/base-docs/docs/arbitration.md -->
 
 ---
+
 title: Arbitration
 slug: /arbitration
 hide_table_of_contents: true
+
 ---
 
 # APPENDIX 1: SEQUENCER, TESTNET, AND BASENAMES INTERFACE TERMS ARBITRATION AGREEMENT
@@ -4437,5 +4456,3 @@ If we make any updates to the Arbitration Agreement, we will make the updated te
 If any provision of this Arbitration Agreement shall be determined to be invalid or unenforceable under any rule, law, or regulation of any local, state, or federal government agency, such provision will be changed and interpreted to accomplish the objectives of the provision to the greatest extent possible under any applicable law and the validity or enforceability of any other provision of this Arbitration Agreement shall not be affected.
 
 ---
-
-

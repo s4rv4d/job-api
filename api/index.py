@@ -26,6 +26,14 @@ def token_count(text: str, approximate_divisor=4) -> int:
     """
     return len(text) // approximate_divisor
 
+def chunk_dictionary(data, max_keys_per_chunk):
+    keys = list(data.keys())
+    for i in range(0, len(keys), max_keys_per_chunk):
+        chunk = [
+            {"key": key, "value": data[key]} for key in keys[i:i + max_keys_per_chunk]
+        ]
+        yield {"content": chunk}
+
 def split_markdown_by_headings_and_size(content: str, max_tokens: int = 800):
     """
     Splits markdown by second-level headings (`##`) and then further splits by paragraphs if needed
@@ -78,33 +86,12 @@ def scrape_job_links():
 		return job_links
 	else:
 		return None
-
-def scrape_ecosystem_apps():
-	url = "https://www.base.org/ecosystem"
-	response = requests.get(url)
-	if response.status_code == 200:
-		soup = BeautifulSoup(response.content, 'html.parser')
-		apps = []
-		print("here")
-		print(soup)
-		for card in soup.find_all("div", class_="group/ecosystem-card"):
-			link_tag = card.find("a", href=True)
-			print(card)
-			print("----")
-			print(link_tag)
-			if link_tag:
-				href = link_tag["href"]
-				print("Found href:", href)
-
-	else:
-		print("Errr")
-		return None
 	
 
 @app.route('/cdp-docs', methods=["GET"])
 def cdp_docs():
 	try:
-		MDX_FILE_PATH = "public/combined-cdp-docs.mdx"
+		MDX_FILE_PATH = "public/combined-cdp-docs.md"
 
 		if not os.path.exists(MDX_FILE_PATH):
 			return jsonify({"error": "MDX file not found"}), 404
@@ -113,13 +100,34 @@ def cdp_docs():
 			mdx_content = file.read()
 
 		
-		html_content = markdown.markdown(mdx_content)
+		# html_content = markdown.markdown(mdx_content)
 
-		soup = BeautifulSoup(html_content, "html.parser")
-		plain_text = soup.get_text()
+		# soup = BeautifulSoup(html_content, "html.parser")
+		# plain_text = soup.get_text()
+
+		# response_data = {
+		# 	"content": plain_text
+		# }
+
+		html_content = markdown.markdown(mdx_content)
+		soup = BeautifulSoup(html_content, 'html.parser')
+
+		data = {}
+		for header in soup.find_all(['h1', 'h2', 'h3']):
+			header_text = header.get_text()
+			next_sibling = header.find_next_sibling()
+			content = next_sibling.get_text() if next_sibling else ''
+			data[header_text] = content
+		
+		chunks = list(chunk_dictionary(data, 15))
+		print(len(chunks))
+		
+		# print(data)
+		# print(len(data))
+
 
 		response_data = {
-			"content": plain_text
+			"chunks": chunks,
 		}
 
 		return jsonify({"response": response_data, "status": 200}), 200
@@ -137,8 +145,29 @@ def base_docs():
 		with open(MDX_FILE_PATH, "r", encoding="utf-8") as file:
 			mdx_content = file.read()
 
+		# response_data = {
+		# 	"content": mdx_content
+		# }
+
+		html_content = markdown.markdown(mdx_content)
+		soup = BeautifulSoup(html_content, 'html.parser')
+
+		data = {}
+		for header in soup.find_all(['h1', 'h2', 'h3']):
+			header_text = header.get_text()
+			next_sibling = header.find_next_sibling()
+			content = next_sibling.get_text() if next_sibling else ''
+			data[header_text] = content
+		
+		chunks = list(chunk_dictionary(data, 15))
+		print(len(chunks))
+		
+		# print(data)
+		# print(len(data))
+
+
 		response_data = {
-			"content": mdx_content
+			"chunks": chunks,
 		}
 
 		return jsonify({"response": response_data, "status": 200}), 200
@@ -156,8 +185,29 @@ def base_learn_docs():
 		with open(MDX_FILE_PATH, "r", encoding="utf-8") as file:
 			mdx_content = file.read()
 
+		# response_data = {
+		# 	"content": mdx_content
+		# }
+
+		html_content = markdown.markdown(mdx_content)
+		soup = BeautifulSoup(html_content, 'html.parser')
+
+		data = {}
+		for header in soup.find_all(['h1', 'h2', 'h3']):
+			header_text = header.get_text()
+			next_sibling = header.find_next_sibling()
+			content = next_sibling.get_text() if next_sibling else ''
+			data[header_text] = content
+		
+		chunks = list(chunk_dictionary(data, 15))
+		print(len(chunks))
+		
+		# print(data)
+		# print(len(data))
+
+
 		response_data = {
-			"content": mdx_content
+			"chunks": chunks,
 		}
 
 		return jsonify({"response": response_data, "status": 200}), 200
@@ -167,21 +217,41 @@ def base_learn_docs():
 @app.route('/ock-docs', methods=['GET'])
 def ock_docs():
 	try:
-		MDX_FILE_PATH = "public/combined-ock-docs-0.35.8.mdx"
+		MDX_FILE_PATH = "public/combined-ock-docs-0.35.8.md"
 		if not os.path.exists(MDX_FILE_PATH):
 			return jsonify({"error": "MDX file not found"}), 404
 
 		with open(MDX_FILE_PATH, "r", encoding="utf-8") as file:
 			mdx_content = file.read()
 		
-		chunks = split_markdown_by_headings_and_size(mdx_content, max_tokens=12000)
+		# chunks = split_markdown_by_headings_and_size(mdx_content, max_tokens=12000)
 
+		# print(len(chunks))
+
+		html_content = markdown.markdown(mdx_content)
+		soup = BeautifulSoup(html_content, 'html.parser')
+
+		data = {}
+		for header in soup.find_all(['h1', 'h2', 'h3']):
+			header_text = header.get_text()
+			next_sibling = header.find_next_sibling()
+			content = next_sibling.get_text() if next_sibling else ''
+			data[header_text] = content
+		
+		chunks = list(chunk_dictionary(data, 15))
 		print(len(chunks))
+		
+		# print(data)
+		# print(len(data))
 
 
 		response_data = {
 			"chunks": chunks,
 		}
+
+		# response_data = {
+		# 	"content": data,
+		# }
 
 		return jsonify({"response": response_data, "status": 200}), 200
 	except Exception as e:
@@ -200,14 +270,15 @@ def get_jobs():
 
 @app.route("/ecosystem-apps", methods=['GET'])
 def get_apps():
-	scrape_ecosystem_apps()
-	return jsonify({"status": 200}), 200
+	with open("public/ecosystem_apps.json", "r", encoding="utf-8") as file:
+			mdx_content = json.load(file)
+   
+	if mdx_content:
+		return jsonify({"status": 200, "response": mdx_content}), 200
+	else:
+		return jsonify({
+		    "message": "Failed to fetch job listings", "status": 500
+		}), 500
 
 if __name__ == "__main__":
 	app.run(host="0.0.0.0", port=8080)
-
-
-
-
-
-

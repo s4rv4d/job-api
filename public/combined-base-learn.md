@@ -1,38 +1,39 @@
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-setup-overview/creating-a-project-vid.md -->
 
 ---
+
 title: Creating a Project
 description: Using Hardhat to start a new project.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='840617485' title='Creating a Project' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-setup-overview/hardhat-overview-vid.md -->
 
 ---
+
 title: Overview
 description: An introduction to Hardhat
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='844387825' title='Hardhat Overview' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-setup-overview/hardhat-setup-overview-sbs.md -->
 
 ---
+
 title: Setup and Overview
 description: An overview of hardhat, a smart contract development framework
 hide_table_of_contents: false
+
 ---
 
 In this article, you'll learn about Hardhat: a development framework to create, test, and deploy smart contracts to Ethereum and other supported EVM chains.
@@ -117,11 +118,11 @@ Since the project uses Typescript, you have the benefit of using static typing.
 The following is the default configuration:
 
 ```tsx
-import { HardhatUserConfig } from 'hardhat/config';
-import '@nomicfoundation/hardhat-toolbox';
+import { HardhatUserConfig } from "hardhat/config";
+import "@nomicfoundation/hardhat-toolbox";
 
 const config: HardhatUserConfig = {
-  solidity: '0.8.17',
+  solidity: "0.8.17",
 };
 
 export default config;
@@ -138,23 +139,23 @@ You can configure aspects such as:
 For example:
 
 ```tsx
-import { HardhatUserConfig } from 'hardhat/config';
-import '@nomicfoundation/hardhat-toolbox';
+import { HardhatUserConfig } from "hardhat/config";
+import "@nomicfoundation/hardhat-toolbox";
 
 const config: HardhatUserConfig = {
-  defaultNetwork: 'base',
+  defaultNetwork: "base",
   networks: {
     base_sepolia: {
-      url: 'https://sepolia.base.org',
-      accounts: ['<private key 1>'],
+      url: "https://sepolia.base.org",
+      accounts: ["<private key 1>"],
     },
     sepolia: {
-      url: 'https://sepolia.infura.io/v3/<key>',
-      accounts: ['<private key 1>', '<private key 2>'],
+      url: "https://sepolia.infura.io/v3/<key>",
+      accounts: ["<private key 1>", "<private key 2>"],
     },
   },
   solidity: {
-    version: '0.8.17',
+    version: "0.8.17",
     settings: {
       optimizer: {
         enabled: true,
@@ -163,10 +164,10 @@ const config: HardhatUserConfig = {
     },
   },
   paths: {
-    sources: './contracts',
-    tests: './test',
-    cache: './cache',
-    artifacts: './artifacts',
+    sources: "./contracts",
+    tests: "./test",
+    cache: "./cache",
+    artifacts: "./artifacts",
   },
 };
 
@@ -189,14 +190,14 @@ After running the `npx hardhat compile` command, you should see a new folder nam
 [Hardhat]: https://hardhat.org/
 [Compilation Artifacts]: https://hardhat.org/hardhat-runner/docs/advanced/artifacts
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/writing-to-contracts/useSimulateContract.md -->
 
 ---
+
 title: The `useSimulateContract` hook
 description: Improve your user experience with the `useSimulateContract` hook.
 hide_table_of_contents: false
+
 ---
 
 The [`useSimulateContract`] hook simulates and validates a contract interaction without actually sending a transaction to the blockchain. Using it allows you to detect and respond to potential errors before the user tries to send a transaction.
@@ -230,12 +231,12 @@ const {
 } = useSimulateContract({
   address: contractData.address as `0x${string}`,
   abi: contractData.abi,
-  functionName: 'claim',
+  functionName: "claim",
 });
 
 useEffect(() => {
   if (claimIsError) {
-    alert('Unable to claim'); // TODO: Better error handling
+    alert("Unable to claim"); // TODO: Better error handling
   }
 }, [claimIsError]);
 
@@ -278,7 +279,7 @@ const {
 } = useSimulateContract({
   address: contractData.address as `0x${string}`,
   abi: contractData.abi,
-  functionName: 'claim',
+  functionName: "claim",
 });
 
 // Deleted `useEffect` for `claimIsError`
@@ -290,11 +291,14 @@ const { writeContract: claim, isPending: claimIsPending } = useWriteContract();
 return (
   <div>
     <p>{claimIsFetching.toString()}</p>
-    <p>{'Token Balance: ' + tokenBalance}</p>
-    <button disabled={claimIsPending || claimIsError} onClick={handleClaimClick}>
-      {claimIsPending ? 'Complete In Wallet' : 'Claim Tokens'}
+    <p>{"Token Balance: " + tokenBalance}</p>
+    <button
+      disabled={claimIsPending || claimIsError}
+      onClick={handleClaimClick}
+    >
+      {claimIsPending ? "Complete In Wallet" : "Claim Tokens"}
     </button>
-    <p>{claimIsError ? 'Unable to claim tokens.' : 'Claim your tokens!'} </p>
+    <p>{claimIsError ? "Unable to claim tokens." : "Claim your tokens!"} </p>
   </div>
 );
 ```
@@ -311,14 +315,14 @@ In this step-by-step, you updated your app to use the `useSimulateContract` hook
 [`useWriteContract`]: https://wagmi.sh/react/hooks/useWriteContract
 [`useSimulateContract`]: https://wagmi.sh/react/hooks/useSimulateContract
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/writing-to-contracts/useWriteContract.md -->
 
 ---
+
 title: The `useWriteContract` hook
 description: Write to your smart contracts with the `useWriteContract` hook.
 hide_table_of_contents: false
+
 ---
 
 The [`useWriteContract`] hook allows you to call your `public` and `external` smart contract functions that write to state and create a permanent modification to the data on chain.
@@ -358,7 +362,7 @@ You've built an app that can read from your Simple DAO smart contract, but so fa
 Add a new component called `TokenInfo` to the project, and a state variable for `tokenBalance`.
 
 ```tsx
-import { useState } from 'react';
+import { useState } from "react";
 
 export function TokenInfo() {
   const [tokenBalance, setTokenBalance] = useState(0);
@@ -372,13 +376,12 @@ You'll need to know how many tokens the user has to be able to make decisions on
 You'll need the user's address to use in `args`, which you can conveniently get from the [`useAccount`] hook using the pattern below.
 
 ```tsx
-const { data: balanceData, queryKey: balanceQueryKey } =
-  useReadContract({
-    address: contractData.address as `0x${string}`,
-    abi: contractData.abi,
-    functionName: "balanceOf",
-    args: [useAccount().address],
-  });
+const { data: balanceData, queryKey: balanceQueryKey } = useReadContract({
+  address: contractData.address as `0x${string}`,
+  abi: contractData.abi,
+  functionName: "balanceOf",
+  args: [useAccount().address],
+});
 
 useEffect(() => {
   if (balanceData) {
@@ -402,7 +405,7 @@ Set the `return` for your component to display this balance to the user:
 ```tsx
 return (
   <div>
-    <p>{'Token Balance: ' + tokenBalance}</p>
+    <p>{"Token Balance: " + tokenBalance}</p>
   </div>
 );
 ```
@@ -440,15 +443,15 @@ const handleClaimClick = () => {
   claim({
     abi: contractData.abi,
     address: contractData.address as `0x${string}`,
-    functionName: 'claim',
+    functionName: "claim",
   });
 };
 
 return (
   <div>
-    <p>{'Token Balance: ' + tokenBalance}</p>
+    <p>{"Token Balance: " + tokenBalance}</p>
     <button disabled={claimIsPending} onClick={handleClaimClick}>
-      {claimIsPending ? 'Complete In Wallet' : 'Claim Tokens'}
+      {claimIsPending ? "Complete In Wallet" : "Claim Tokens"}
     </button>
   </div>
 );
@@ -474,14 +477,14 @@ In this step-by-step, you've learned how to use the [`useWriteContract`] hook to
 [OpenZeppelin ERC20]: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol
 [`useAccount`]: https://wagmi.sh/react/hooks/useAccount
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/control-structures/control-structures.md -->
 
 ---
+
 title: Control Structures
 description: Learn how to control code flow in Solidity.
 hide_table_of_contents: false
+
 ---
 
 Solidity supports many familiar control structures, but these come with additional restrictions and considerations due to the cost of gas and the necessity of setting a maximum amount of gas that can be spent in a given transaction.
@@ -712,56 +715,56 @@ In this lesson, you've learned how to control code flow with standard conditiona
 [control structures]: https://docs.soliditylang.org/en/v0.8.17/control-structures.html
 [errors]: https://docs.soliditylang.org/en/v0.8.17/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/control-structures/loops-vid.md -->
 
 ---
+
 title: Loops
 description: Explore loops in Solidity.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='805353144' title='Loops' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/control-structures/standard-control-structures-vid.md -->
 
 ---
+
 title: If, Else, and Else If
 description: Learn how to control your code.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='805353200' title='Standard Control Structures' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/control-structures/require-revert-error-vid.md -->
 
 ---
+
 title: Require, Revert, and Error
 description: Handle errors in Solidity.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='805353180' title='Require, Revert, and Error' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/control-structures/control-structures-exercise.md -->
 
 ---
+
 title: Control Structures Exercise
 description: Exercise - Demonstrate your knowledge of control structures.
 hide_table_of_contents: false
+
 ---
 
 Create a contract that adheres to the following specifications:
@@ -811,8 +814,6 @@ As these are separate networks with separate data, your NFTs **will not** transf
 import CafeUnitTest from '../../../src/components/CafeUnitTest/index.jsx'
 
 <CafeUnitTest nftNum={2}/>
-
-
 
 <!-- File: ../web/apps/base-docs/base-learn/docs/learning-objectives.md -->
 
@@ -1075,14 +1076,14 @@ Use the script to regenerate this file.
 - Configure the options in `useSimulateContract` and `useWriteContract`
 - Call a smart contract function on-demand using the write function from `useWriteContract`, with arguments and a value
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/erc-721-token/erc-721-exercise.md -->
 
 ---
+
 title: ERC-721 Tokens Exercise
 description: Exercise - Create your own NFT!
 hide_table_of_contents: false
+
 ---
 
 Create a contract that adheres to the following specifications.
@@ -1163,70 +1164,70 @@ import CafeUnitTest from '../../../src/components/CafeUnitTest/index.jsx'
 
 <CafeUnitTest nftNum={15}/>
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/erc-721-token/erc-721-on-opensea-vid.md -->
 
 ---
+
 title: ERC-721 Token On Opensea
 description: Learn how a popular marketplace interprets tokens.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='813634970' title='ERC-721 On OpenSea' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/erc-721-token/openzeppelin-erc-721-vid.md -->
 
 ---
+
 title: OpenZeppelin ERC-721 Implementation
-description: Review  the ERC-721 implementation by OpenZeppelin.
+description: Review the ERC-721 implementation by OpenZeppelin.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='813635078' title='OpenZeppelin ERC-721 Implementation' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/erc-721-token/implementing-an-erc-721-vid.md -->
 
 ---
+
 title: Implementing an ERC-721
 description: Deploy your own NFT.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='813635046' title='Implementing an ERC-721 Token' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/erc-721-token/erc-721-standard-video.md -->
 
 ---
+
 title: ERC-721 Token Standard
 description: Review the formal standard for the ERC-721 Token.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='813634992' title='ERC-721 Standard Overview' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/erc-721-token/erc-721-sbs.md -->
 
 ---
+
 title: ERC-721 Token
 description: Build your own NFT based on the ERC-721 standard.
 hide_table_of_contents: false
+
 ---
 
 Punks, Apes, and birds of all kinds. You've heard about them, seen them, and may even be lucky enough to own a famous NFT. Or maybe you've just bought into a random collection and aren't sure what to do with your NFT. NFTs aren't really pictures, or anything else specific. They're a method of proving ownership of a digital asset. Anyone can right-click on a picture of a monkey and set it as their profile picture, but only the owner can use it with apps that utilize web3 ownership.
@@ -1533,14 +1534,14 @@ In this lesson, you've learned how to use OpenZeppelin's ERC-721 implementation 
 [Doodles]: https://nft.coinbase.com/collection/ethereum/0x8a90cab2b38dba80c64b7734e58ee1db38b8992e
 [uses IPFS]: https://ipfs.io/ipfs/QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/erc-721-token/erc-721-standard.md -->
 
 ---
+
 title: The ERC-721 Token Standard
 description: An overview of the ERC-721 token standard
 hide_table_of_contents: false
+
 ---
 
 In this article, we'll delve into the ERC-721 token standard, exploring its technical specs, applications, and how it differs from the ERC-20 standard.
@@ -1633,14 +1634,14 @@ ERC-721, with its consistent framework for non-fungible tokens, has revolutioniz
 - [EIP-721: ERC-721 Token Standard](https://eips.ethereum.org/EIPS/eip-721)
 - [ERC-721 Token Standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/)
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/frontend-setup/overview.md -->
 
 ---
+
 title: 'Overview'
 description: An overview of this course.
 hide_table_of_contents: false
+
 ---
 
 Welcome! The course you are about to begin will rapidly introduce you to frontend web development for onchain apps and enable you to write websites that can call your smart contract functions in a similar way to how traditional sites interact with APIs.
@@ -1689,14 +1690,14 @@ By the end of this course, you should be able to:
 
 ---
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/frontend-setup/wallet-connectors.md -->
 
 ---
+
 title: Wallet Connectors
 description: Learn about how wallet connector libraries aggregate wallets and make it easier to connect to them from your app.
 hide_table_of_contents: false
+
 ---
 
 One of the most intimidating tasks when building an onchain app is making that initial connection between your users' wallets, and your app. Initial research often surfaces a bewildering number of wallets, each with their own SDKs, and own methods to manage the connection. Luckily, you don't actually need to manage all of this on your own. There are a number of wallet connector libraries specialized in creating a smooth and beautiful user experience to facilitate this connection.
@@ -1788,14 +1789,14 @@ In this article, you've learned how libraries such as [Rainbowkit], [ConnectKit]
 [passkeys]: https://safety.google/authentication/passkey/
 [Use the Coinbase Smart Wallet and EOAs with OnchainKit]: https://docs.base.org/tutorials/smart-wallet-and-eoa-with-onchainkit
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/frontend-setup/building-an-onchain-app.md -->
 
 ---
+
 title: Building an Onchain App
 description: Learn step-by-step how to turn a regular template app into an onchain app with a wallet connection.
 hide_table_of_contents: false
+
 ---
 
 While it's convenient and fast to start from a template, the template may not fit your needs. Whether you prefer a different stack, or have already started building the traditional web components of your app, it's common to need to manually add onchain libraries to get your app working.
@@ -1874,12 +1875,12 @@ As discussed above, add `'use client';` to the top of the file.
 Continue with the imports:
 
 ```tsx
-import '@rainbow-me/rainbowkit/styles.css';
-import { useState, type ReactNode } from 'react';
-import { getDefaultConfig, RainbowKitProvider } from '@rainbow-me/rainbowkit';
-import { WagmiProvider } from 'wagmi';
-import { base, baseSepolia } from 'wagmi/chains';
-import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
+import "@rainbow-me/rainbowkit/styles.css";
+import { useState, type ReactNode } from "react";
+import { getDefaultConfig, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import { WagmiProvider } from "wagmi";
+import { base, baseSepolia } from "wagmi/chains";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 ```
 
 :::caution
@@ -1908,8 +1909,8 @@ Remember, everything on the frontend is public! Be sure to configure the allowli
 
 ```tsx
 const config = getDefaultConfig({
-  appName: 'Cool Onchain App',
-  projectId: 'YOUR_PROJECT_ID',
+  appName: "Cool Onchain App",
+  projectId: "YOUR_PROJECT_ID",
   chains: [base, baseSepolia],
   ssr: true, // If your dApp uses server side rendering (SSR)
 });
@@ -1956,7 +1957,7 @@ You're now ready to add your connect button. You can do this anywhere in your ap
 Open up `page.tsx`, and import the `ConnectButton`:
 
 ```tsx
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 ```
 
 Then, simply add the `ConnectButton` component at the top of the first `<div>`:
@@ -2012,15 +2013,15 @@ If you're looking to quickly bootstrap a simple app, you can always use a script
 [OnchainKit]: https://onchainkit.xyz/?utm_source=basedocs&utm_medium=tutorials&campaign=building-an-onchain-app
 [Use the Coinbase Smart Wallet and EOAs with OnchainKit]: https://docs.base.org/tutorials/smart-wallet-and-eoa-with-onchainkit
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/exercise-contracts.md -->
 
 ---
+
 title: 'Exercise Contracts'
 description: A list of verified unit test contracts for Base Learn exercises.
 keywords: [Solidity, Base Learn, NFT]
 hide_table_of_contents: false
+
 ---
 
 Many of the sections in Base Learn contain an exercise to test your knowledge on the material you have just completed. We tell you **what** to do, but not **how** to do it. You have to apply your knowledge and demonstrate the new abilities you have earned.
@@ -2073,14 +2074,14 @@ Below is a list of the exercises, with links to view their code. The unit tests 
 [0x4F333c49B820013e5E6Fe86634DC4Da88039CE50]: https://sepolia.basescan.org/address/0x4f333c49b820013e5e6fe86634dc4da88039ce50#code#F21#L1
 [0x15534ED3d1dBA55148695B2Ba4164F147E47a10c]: https://sepolia.basescan.org/address/0x15534ed3d1dba55148695b2ba4164f147e47a10c#code#F18#L1
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/ethereum-virtual-machine/evm-diagram.md -->
 
 ---
+
 title: EVM Diagram
 description: An overview of the Ethereum Virtual Machine
 hide_table_of_contents: false
+
 ---
 
 In this article, we'll examine the inner workings of the EVM, its components, and its role within the Ethereum network.
@@ -2181,14 +2182,14 @@ The EVM plays a vital role within the Ethereum network. By examining the EVM's k
 
 [the ethereum virtual machine (mastering ethereum)]: https://cypherpunks-core.github.io/ethereumbook/13evm.html#evm_architecture
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/address-and-payable/address-and-payable.md -->
 
 ---
+
 title: Address and Payable in Solidity
 description: A comprehensive guide to understanding and using address and payable address types in Solidity.
 hide_table_of_contents: false
+
 ---
 
 Understanding address and payable address types is crucial for managing Ether transfers and interactions within your Solidity contracts. This article will delve into their key distinctions and practical applications.
@@ -2276,26 +2277,26 @@ Appropriately using address and address payable types is essential for secure an
 
 [Address]: https://docs.soliditylang.org/en/latest/types.html#address
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/welcome.md -->
 
 ---
+
 title: Learn to Build Smart Contracts and Onchain Apps
 description: Base Learn is a comprehensive, free guide to learning smart contract and onchain app development.
 keywords:
-  [
-    Smart contract development,
-    Onchain app development,
-    Solidity programming,
-    EVM-compatible chains,
-    Base blockchain,
-    Ethereum smart contracts,
-    Learn smart contract development,
-    Deploy smart contracts on Base,
-  ]
+[
+Smart contract development,
+Onchain app development,
+Solidity programming,
+EVM-compatible chains,
+Base blockchain,
+Ethereum smart contracts,
+Learn smart contract development,
+Deploy smart contracts on Base,
+]
 hide_table_of_contents: false
 image: /img/base-learn-open-graph.png
+
 ---
 
 ![Welcome](../assets/images/welcome/Base_Learn_Hero.png)
@@ -2318,28 +2319,28 @@ import LearningObjectives from './learning-objectives.md';
 
 [Base Builder Tutorials]: https://docs.base.org/tutorials/
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/imports/imports-vid.md -->
 
 ---
+
 title: Imports
 description: Import libraries and contracts into your own contracts.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='817805618' title='Imports' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/imports/imports-sbs.md -->
 
 ---
+
 title: Imports
 description: Learn to import code into your contract.
 hide_table_of_contents: false
+
 ---
 
 In this lesson, we'll learn how to import code written by others into your contracts. We'll also explore the [OpenZeppelin] library of smart contracts.
@@ -2424,6 +2425,7 @@ function numberOfVisitors() public view returns (uint) {
     return visitors.length();
 }
 ```
+
 </details>
 
 ---
@@ -2441,14 +2443,14 @@ In this lesson, you imported a library from [OpenZeppelin] and implemented some 
 [sets]: https://en.wikipedia.org/wiki/Set_(abstract_data_type)
 [`using`]: https://docs.soliditylang.org/en/v0.8.17/contracts.html#using-for
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/imports/imports-exercise.md -->
 
 ---
+
 title: Imports Exercise
 description: Exercise - Demonstrate your knowledge of imports.
 hide_table_of_contents: false
+
 ---
 
 Create a contract that adheres to the following specifications.
@@ -2534,14 +2536,14 @@ import CafeUnitTest from '../../../src/components/CafeUnitTest/index.jsx'
 
 <CafeUnitTest nftNum={19}/>
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/storage/simple-storage-sbs.md -->
 
 ---
+
 title: Storing Data
 description: Learn how to Store data on the blockchain.
 hide_table_of_contents: false
+
 ---
 
 Ultimately, the power of the blockchain is that anyone can store their data on it via the `storage` in a smart contract. In this step-by-step guide, you'll learn how to access and use the `storage` data location.
@@ -2695,7 +2697,6 @@ It would also be good to be able to update the `age` value. This problem has sli
 
 <summary>Reveal code</summary>
 
-
 ```solidity
 function increaseAge() public {
     age++;
@@ -2705,7 +2706,6 @@ function increaseAge() public {
 </details>
 
 <br/>
-
 
 But what if a user calls this function by mistake? Good point!
 
@@ -2741,7 +2741,6 @@ Redeploy your contract. Note that now you have added parameters to the `construc
 ![Deployment](../../assets/images/storage/deployment-with-params.png)
 
 Once completed, your contract should be similar to:
-
 
 <details>
 
@@ -2785,14 +2784,14 @@ In this lesson, you've explored how to persistently store values on the blockcha
 [packed]: https://docs.soliditylang.org/en/v0.8.17/internals/layout_in_storage.html
 [layout]: https://docs.soliditylang.org/en/v0.8.17/internals/layout_in_storage.html
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/storage/how-storage-works.md -->
 
 ---
+
 title: How Storage Works
 description: An introduction to how storage works in Ethereum
 hide_table_of_contents: false
+
 ---
 
 In this article, we will delve into the workings of Ethereum storage, explore the nuances of variable declaration ordering, and provide examples of efficient and inefficient storage practices to create optimized smart contracts.
@@ -3018,14 +3017,14 @@ Creating efficient and optimized smart contracts on Ethereum requires a thorough
 [ethereum in depth, part 2]: https://blog.openzeppelin.com/ethereum-in-depth-part-2-6339cf6bddb9/
 [ethereum yellow paper]: https://ethereum.github.io/yellowpaper/paper.pdf
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/storage/storage-exercise.md -->
 
 ---
+
 title: Storage Exercise
 description: Exercise - Demonstrate your knowledge of storage.
 hide_table_of_contents: false
+
 ---
 
 Create a contract that adheres to the following specifications:
@@ -3136,70 +3135,70 @@ import CafeUnitTest from '../../../src/components/CafeUnitTest/index.jsx'
 
 <CafeUnitTest nftNum={3}/>
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/storage/how-storage-works-video.md -->
 
 ---
+
 title: How Storage Works
 description: Learn how storage works in the EVM.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='804479654' title='How Storage Works' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/storage/simple-storage-video.md -->
 
 ---
+
 title: Simple Storage
 description: Store data on the blockchain.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='804479707' title='Simple Storage' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/intro-to-tokens/misconceptions-about-tokens-vid.md -->
 
 ---
+
 title: Common Misconceptions
 description: Review some common misconceptions before starting.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='808096842' title='Misconceptions About Tokens' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/intro-to-tokens/intro-to-tokens-vid.md -->
 
 ---
+
 title: Introduction
 description: Welcome to the wonderful world of tokens!
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='808096827' title='Introduction to Tokens' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/intro-to-tokens/tokens-overview.md -->
 
 ---
+
 title: Overview
 description: An overview of tokens on Ethereum
 hide_table_of_contents: false
+
 ---
 
 This article will provide an overview of the most popular token standards on Ethereum, including ERC-20, ERC-721, ERC-1155, and a discussion on their properties and various use cases.
@@ -3290,14 +3289,14 @@ Ethereum's ERC token standards have played a pivotal role in shaping the digital
 
 [token standards]: https://ethereum.org/en/developers/docs/standards/tokens/
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/reading-and-displaying-data/useAccount.md -->
 
 ---
+
 title: The `useAccount` Hook
 description: Learn how to access information about the connected user's wallet.
 hide_table_of_contents: false
+
 ---
 
 [wagmi] is a library that provides React hooks that trade a somewhat complex setup process for a great developer experience when building a frontend around the constraints and quirks of onchain building. One of the hooks, `useAccount`, provides access to information about your users' wallet and connection information.
@@ -3325,8 +3324,8 @@ You can set up your providers as described in [Introduction to Providers], or us
 
 ```tsx
 const config = getDefaultConfig({
-  appName: 'RainbowKit App',
-  projectId: 'YOUR APP ID',
+  appName: "RainbowKit App",
+  projectId: "YOUR APP ID",
   chains: [baseSepolia],
   ssr: true,
 });
@@ -3353,11 +3352,11 @@ export function ConnectionWindow() {
 
 ```tsx
 // index.tsx
-import { ConnectButton } from '@rainbow-me/rainbowkit';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import { ConnectionWindow } from '../components/ConnectionWindow';
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import type { NextPage } from "next";
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import { ConnectionWindow } from "../components/ConnectionWindow";
 
 const Home: NextPage = () => {
   return (
@@ -3378,7 +3377,7 @@ For the purposes of this exercise, open `styles/Home.module.css` and **delete or
 Return to `ConnectionWindow.tsx` and add the `useAccount` hook to the top, where you'd add any state variables. The general pattern for wagmi hooks is you decompose the properties you want to use from a function call of the name of the hook. For some, you'll add a config object to that call, but it's not needed for this one.
 
 ```tsx
-import { useAccount } from 'wagmi';
+import { useAccount } from "wagmi";
 
 export function ConnectionWindow() {
   const { address, isConnected, isConnecting, isDisconnected } = useAccount();
@@ -3399,7 +3398,7 @@ Update your `<div>` to show the address of the connected wallet:
 <div>
   <h2>Connection Status</h2>
   <div>
-    <p>{'Address: ' + address}</p>
+    <p>{"Address: " + address}</p>
   </div>
 </div>
 ```
@@ -3456,14 +3455,14 @@ In this guide, you've learned how the `useAccount` hook gives you access to info
 [Introduction to Providers]: https://docs.base.org/tutorials/intro-to-providers/
 [UseAccountReturnType]: https://wagmi.sh/react/api/hooks/useAccount#return-type
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/reading-and-displaying-data/useReadContract.md -->
 
 ---
+
 title: The `useReadContract` Hook
 description: Learn how to call view and pure functions from a smart contract.
 hide_table_of_contents: false
+
 ---
 
 The `useReadContract` hook is [wagmi]'s method of calling `pure` and `view` functions from your smart contracts. As with `useAccount`, `useReadContract` contains a number of helpful properties to enable you to manage displaying information to your users.
@@ -3554,7 +3553,7 @@ Either way, add a folder called `deployments` and place a copy of the artifact f
 Add a file for a new component called `IssueList.tsx`. You can start with:
 
 ```tsx
-import { useReadContract } from 'wagmi';
+import { useReadContract } from "wagmi";
 
 export function IssueList() {
   return (
@@ -3597,7 +3596,7 @@ const [issues, setIssues] = useState<Issue[]>([]);
 You'll also need to import your contract artifact:
 
 ```tsx
-import contractData from '../deployments/FEWeightedVoting.json';
+import contractData from "../deployments/FEWeightedVoting.json";
 ```
 
 Finally, the moment you've been waiting for: Time to read from your contract! Add an instance of the [`useReadContract`] hook. It works similarly to the [`useAccount`] hook. Configure it with:
@@ -3610,7 +3609,7 @@ const {
 } = useReadContract({
   address: contractData.address as `0x${string}`,
   abi: contractData.abi,
-  functionName: 'getAllIssues',
+  functionName: "getAllIssues",
 });
 ```
 
@@ -3620,7 +3619,7 @@ You can use `useEffect` to do something when the call completes and the data. Fo
 useEffect(() => {
   if (issuesData) {
     const issuesList = issuesData as Issue[];
-    console.log('issuesList', issuesList);
+    console.log("issuesList", issuesList);
     setIssues(issuesList);
   }
 }, [issuesData]);
@@ -3655,13 +3654,13 @@ function renderIssues() {
   return issues.map((issue) => (
     <div key={issue.issueDesc}>
       <h3>{issue.issueDesc}</h3>
-      <p>{'Voters: ' + issue.voters.toString()}</p>
-      <p>{'Votes For: ' + issue.votesFor.toString()}</p>
-      <p>{'Votes Against: ' + issue.votesAgainst.toString()}</p>
-      <p>{'Votes Abstain: ' + issue.votesAbstain.toString()}</p>
-      <p>{'Quorum: ' + issue.quorum.toString()}</p>
-      <p>{'Passed: ' + issue.passed}</p>
-      <p>{'Closed: ' + issue.closed}</p>
+      <p>{"Voters: " + issue.voters.toString()}</p>
+      <p>{"Votes For: " + issue.votesFor.toString()}</p>
+      <p>{"Votes Against: " + issue.votesAgainst.toString()}</p>
+      <p>{"Votes Abstain: " + issue.votesAbstain.toString()}</p>
+      <p>{"Quorum: " + issue.quorum.toString()}</p>
+      <p>{"Passed: " + issue.passed}</p>
+      <p>{"Closed: " + issue.closed}</p>
     </div>
   ));
 }
@@ -3710,15 +3709,15 @@ const {
 } = useReadContract({
   address: contractData.address as `0x${string}`,
   abi: contractData.abi,
-  functionName: 'issues',
+  functionName: "issues",
   args: [1],
 });
 
 useEffect(() => {
   if (getOneData) {
-    console.log('getOneData', getOneData);
+    console.log("getOneData", getOneData);
     const issueOne = getOneData as Issue;
-    console.log('Issue One', issueOne);
+    console.log("Issue One", issueOne);
   }
 }, [getOneData]);
 ```
@@ -3922,14 +3921,14 @@ contract FEWeightedVoting is ERC20 {
 [ABI]: https://docs.soliditylang.org/en/latest/abi-spec.html
 [`useReadContract`]: https://wagmi.sh/react/hooks/useReadContract
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/reading-and-displaying-data/configuring-useReadContract.md -->
 
 ---
+
 title: Configuring `useReadContract`
 description: Configure the properties of the `useReadContract` hook.
 hide_table_of_contents: false
+
 ---
 
 The [`useReadContract`] hook has a number of configurable properties that will allow you to adapt it to your needs. You can combine the functionality of TanStack queries with [`useBlockNumber`] to watch the blockchain for changes, although doing so will consume a number of API calls.
@@ -3959,9 +3958,9 @@ Once the excitement of your accomplishment of finally reading from your own cont
 The easiest is to use `useBlockNumber` with the `watch` feature to automatically keep track of the block number, then use the `queryClient` to update when that changes. **Make sure** you decompose the `queryKey` from the return of `useReadContract`.
 
 ```tsx
-import { useEffect, useState } from 'react';
-import { useReadContract, useBlockNumber } from 'wagmi';
-import { useQueryClient } from '@tanstack/react-query';
+import { useEffect, useState } from "react";
+import { useReadContract, useBlockNumber } from "wagmi";
+import { useQueryClient } from "@tanstack/react-query";
 
 // Other Code
 
@@ -3979,7 +3978,7 @@ export function IssueList() {
   } = useReadContract({
     address: contractData.address as `0x${string}`,
     abi: contractData.abi,
-    functionName: 'getAllIssues',
+    functionName: "getAllIssues",
   });
 
   // Note that this is a separate `useEffect` from the one that handles the
@@ -4018,12 +4017,12 @@ useEffect(() => {
   const onFocus = () => setPageIsFocused(true);
   const onBlur = () => setPageIsFocused(false);
 
-  window.addEventListener('focus', onFocus);
-  window.addEventListener('blur', onBlur);
+  window.addEventListener("focus", onFocus);
+  window.addEventListener("blur", onBlur);
 
   return () => {
-    window.removeEventListener('focus', onFocus);
-    window.removeEventListener('blur', onBlur);
+    window.removeEventListener("focus", onFocus);
+    window.removeEventListener("blur", onBlur);
   };
 }, []);
 ```
@@ -4050,7 +4049,7 @@ return (
   <div>
     <h2>Number of times called</h2>
     <p>{timesCalled.toString()}</p>
-    <p>{'Has focus: ' + pageIsFocused}</p>
+    <p>{"Has focus: " + pageIsFocused}</p>
     <h2>All Issues</h2>
     <div>{renderIssues()}</div>
   </div>
@@ -4069,8 +4068,8 @@ Adjust your [`pollingInterval`] by setting it in `getDefaultConfig` in `_app.tsx
 
 ```tsx
 const config = getDefaultConfig({
-  appName: 'RainbowKit App',
-  projectId: 'YOUR_PROJECT_ID',
+  appName: "RainbowKit App",
+  projectId: "YOUR_PROJECT_ID",
   chains: [baseSepolia],
   ssr: true,
   pollingInterval: 30_000,
@@ -4099,7 +4098,7 @@ return (
     <button onClick={handleTriggerRead}>Read Now</button>
     <h2>Number of times called</h2>
     <p>{timesCalled.toString()}</p>
-    <p>{'Has focus: ' + pageIsFocused}</p>
+    <p>{"Has focus: " + pageIsFocused}</p>
     <h2>All Issues</h2>
     <div>{renderIssues()}</div>
   </div>
@@ -4132,7 +4131,7 @@ Try to modify your button to provide feedback to the user that the function has 
 ```tsx
 // Bad code example, do not use
 <button disabled={issuesIsLoading} onClick={handleTriggerRead}>
-  {issuesIsLoading ? 'Loading' : 'Read Now'}
+  {issuesIsLoading ? "Loading" : "Read Now"}
 </button>
 ```
 
@@ -4143,7 +4142,7 @@ Instead, try decomposing `isFetching` in your `useReadContract`. This property i
 ```tsx
 // Imperfect code example, do not use
 <button disabled={issuesIsFetching} onClick={handleTriggerRead}>
-  {issuesIsFetching ? 'Loading' : 'Read Now'}
+  {issuesIsFetching ? "Loading" : "Read Now"}
 </button>
 ```
 
@@ -4162,7 +4161,7 @@ const [issueNumber, setIssueNumber] = useState(0);
 const { isLoading: getIssueIsLoading } = useReadContract({
   address: contractData.address as `0x${string}`,
   abi: contractData.abi,
-  functionName: 'getIssue',
+  functionName: "getIssue",
   args: [issueNumber],
 });
 ```
@@ -4185,16 +4184,16 @@ In this guide, you've learned how to use the `watch` feature of `useBlockNumber`
 [`useReadContracts`]: https://wagmi.sh/react/hooks/useReadContracts
 [`pollingInterval`]: https://wagmi.sh/react/api/createConfig#pollinginterval
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/development-tools/overview.md -->
 
 ---
+
 title: Overview
 description: Learn about development environment options
 keywords:
-  [Hardhat, Foundry, Remix, smart contract development, development, development environments]
+[Hardhat, Foundry, Remix, smart contract development, development, development environments]
 hide_table_of_contents: false
+
 ---
 
 As the popularity and possibilities of building onchain have increased, so has the number, quality, and ease of setup for a variety of smart contract development environments. Most of the smart contract development content in Base Learn is done in [Remix], an online IDE that allows you to dive right into learning without worrying about setup.
@@ -4208,14 +4207,14 @@ You may wish to select and install one of these now, but feel free to skip those
 [Hardhat]: https://hardhat.org/
 [Smart Contract Development]: ../introduction-to-solidity/introduction-to-solidity-overview
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/advanced-functions/function-modifiers.md -->
 
 ---
+
 title: Function Modifiers
 description: Build custom function modifiers to efficiently modify functionality.
 hide_table_of_contents: false
+
 ---
 
 Function modifiers allow you to efficiently change the behavior of functions. In some ways, it's similar to inheritance, but there are restrictions, particularly in variable scope.
@@ -4382,28 +4381,28 @@ Function `modifier`s are an efficient and reusable way to add checks, trigger er
 
 [one provided by OpenZeppelin]: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/advanced-functions/function-visibility-vid.md -->
 
 ---
+
 title: Function Visibility
 description: Learn how to control the visibility of functions.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='804676890' title='Function Visibility' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/advanced-functions/function-visibility.md -->
 
 ---
+
 title: Function Visibility and State Mutability
 description: A quick reference for all your function declaring needs.
 hide_table_of_contents: false
+
 ---
 
 You've seen much of this before, but this document outlines and highlights the options for _function visibility_ and _state mutability_ all in one document.
@@ -4531,44 +4530,44 @@ The visibility and mutability keywords in Solidity help you organize your code a
 
 [visibility]: https://docs.soliditylang.org/en/v0.8.17/contracts.html?highlight=pure#function-visibility
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/advanced-functions/function-modifiers-vid.md -->
 
 ---
+
 title: Function Modifiers
 description: Use modifiers to control how functions work.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='804676855' title='Function Modifiers' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-tools-and-testing/overview.md -->
 
 ---
+
 title: 'Overview'
 slug: /hardhat-tools-and-testing/overview
 description: What's in this learning material.
 author: Brian Doyle
 keywords:
-  [
-    Hardhat Tools,
-    Smart Contract Development,
-    Gas Optimization,
-    Debugging,
-    Test Coverage,
-    Contract Size,
-    Solidity,
-    Base network,
-    Base blockchain,
-    blockchain development,
-  ]
+[
+Hardhat Tools,
+Smart Contract Development,
+Gas Optimization,
+Debugging,
+Test Coverage,
+Contract Size,
+Solidity,
+Base network,
+Base blockchain,
+blockchain development,
+]
 hide_table_of_contents: false
 displayed_sidebar: null
+
 ---
 
 # Overview of Hardhat Tools and Testing
@@ -4624,14 +4623,14 @@ We also assume that you've got Hardhat up and running, and can write unit tests 
 [Hardhat plugins]: https://hardhat.org/hardhat-runner/plugins
 [Base Learn]: https://base.org/learn
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/inheritance/inheritance-exercise.md -->
 
 ---
+
 title: Inheritance Exercise
 description: Exercise - Demonstrate your knowledge of inheritance.
 hide_table_of_contents: false
+
 ---
 
 Create contracts that adhere to the following specifications.
@@ -4750,14 +4749,14 @@ import CafeUnitTest from '../../../src/components/CafeUnitTest/index.jsx'
 
 <CafeUnitTest nftNum={8}/>
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/inheritance/multiple-inheritance.md -->
 
 ---
+
 title: Multiple Inheritance
 description: Learn how to have a contract inherit from multiple contracts.
 hide_table_of_contents: false
+
 ---
 
 Contracts can inherit from more than one contract. In this lesson, we'll explore how multiple inheritance works in Solidity.
@@ -5049,28 +5048,28 @@ In this lesson, you've explored how to use multiple inheritance to import additi
 
 [`virtual` and `override`]: https://docs.soliditylang.org/en/v0.8.17/contracts.html?#function-overriding
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/inheritance/abstract-contracts-vid.md -->
 
 ---
+
 title: Abstract Contracts
 description: Create contracts that exist only to be inherited from.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='805035946' title='Abstract Contracts' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/inheritance/abstract-contracts-sbs.md -->
 
 ---
+
 title: Abstract Contracts
 description: Learn how to make contracts that must be inherited by another contract.
 hide_table_of_contents: false
+
 ---
 
 [Abstract] contracts can't exist on their own. Their functionality can only be utilized by a contract that inherits from them. In this lesson, you'll learn how to create an abstract contract.
@@ -5139,7 +5138,6 @@ function whoAreYou() public override pure returns (string memory) {
 
 </details>
 
-
 ---
 
 ## Conclusion
@@ -5150,42 +5148,42 @@ In this lesson, you've learned how to implement and inherit from an abstract con
 
 [Abstract]: https://docs.soliditylang.org/en/v0.8.17/contracts.html?#abstract-contracts
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/inheritance/multiple-inheritance-vid.md -->
 
 ---
+
 title: Multiple Inheritance
 description: Create contracts that inherit from multiple contracts.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='805035992' title='Multiple Inheritance' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/inheritance/inheritance-vid.md -->
 
 ---
+
 title: Inheritance
 description: Create contracts that inherit from other contracts.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='805035971' title='Inheritance' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/inheritance/inheritance-sbs.md -->
 
 ---
+
 title: Inheritance
 description: Learn how to use inheritance to bring functionality from one contract into another.
 hide_table_of_contents: false
+
 ---
 
 Solidity is an object-oriented language. Contracts can inherit from one another, allowing efficient reuse of code.
@@ -5373,14 +5371,14 @@ In this lesson, you've learned how to use inheritance to include the functionali
 
 [Inheritance]: https://docs.soliditylang.org/en/v0.8.17/contracts.html
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/error-triage/error-triage.md -->
 
 ---
+
 title: Error Triage
 description: Learn how to identify and resolve common errors in Solidity.
 hide_table_of_contents: false
+
 ---
 
 Debugging is a part of every language, platform, and framework. The EVM is a unique and relatively constrained computer, so you'll encounter some types of errors that may be unfamiliar. In this article, we'll explore some of the more common ones and share methods for resolving them.
@@ -5426,7 +5424,6 @@ Fix by correcting the type or value, as appropriate for your needs:
 
 <summary>Reveal code</summary>
 
-
 ```solidity
 function compilerTypeErrorFixed() public pure returns (string) {
     string myNumber = "One";
@@ -5465,7 +5462,6 @@ Fix by explicitly casting as necessary:
 <details>
 
 <summary>Reveal code</summary>
-
 
 ```solidity
 function compilerConversionErrorFixed() public pure returns (uint) {
@@ -5524,7 +5520,6 @@ Resolve by explicitly converting to the final type:
 <details>
 
 <summary>Reveal code</summary>
-
 
 ```
 function compilerOperatorErrorFixed() public pure returns (uint) {
@@ -5604,7 +5599,6 @@ Resolve this error by breaking up large functions and separating operations into
 <details>
 
 <summary>Reveal code</summary>
-
 
 ```solidity
 function stackDepthLimitFixed() public pure returns (uint) {
@@ -5804,7 +5798,6 @@ Fix by changing your code to handle the expected range of values.
 
 <summary>Reveal code</summary>
 
-
 ```solidity
 function badSubstractionFixed() public pure returns (int) {
     int first = 1;
@@ -5844,28 +5837,28 @@ In this lesson, you reviewed the causes of and solutions for a number of compile
 [panic]: https://docs.soliditylang.org/en/v0.8.17/control-structures.html?#panic-via-assert-and-error-via-require
 [EVM stack]: https://docs.soliditylang.org/en/v0.8.17/introduction-to-smart-contracts.html#storage-memory-and-the-stack
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/error-triage/error-triage-vid.md -->
 
 ---
+
 title: Error Triage
 description: Learn to debug common errors.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='817805593' title='Error Triage' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/error-triage/error-triage-exercise.md -->
 
 ---
+
 title: Error Triage Exercise
 description: Exercise - Demonstrate your debugging skill.
 hide_table_of_contents: false
+
 ---
 
 Copy the starter code into a new file in Remix.
@@ -5956,14 +5949,14 @@ import CafeUnitTest from '../../../src/components/CafeUnitTest/index.jsx'
 
 <CafeUnitTest nftNum={10}/>
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/structs/structs-exercise.md -->
 
 ---
+
 title: Structs Exercise
 description: Exercise - Demonstrate your knowledge of structs.
 hide_table_of_contents: false
+
 ---
 
 Create a contract that adheres to the following specifications.
@@ -6044,14 +6037,14 @@ Ensure your variable sizes align with their intended use, and consider the nuanc
 
 </details>
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/structs/structs-sbs.md -->
 
 ---
+
 title: Structs
 description: Practice using structs.
 hide_table_of_contents: false
+
 ---
 
 The `struct` type allows you to organize related data of different types.
@@ -6389,42 +6382,42 @@ In this lesson, you've learned how to use the `struct` keyword to create a custo
 [packing]: https://docs.soliditylang.org/en/v0.8.17/internals/layout_in_storage.html
 [on purpose]: https://github.com/ethereum/solidity/issues/1626
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/structs/structs-vid.md -->
 
 ---
+
 title: Structs
 description: Create user-defined types.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='804479292' title='Structs' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/introduction-to-ethereum/ethereum-dev-overview-vid.md -->
 
 ---
+
 title: Ethereum Applications
 description: An overview of web 3 application development.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='808101737' title='Ethereum Applications Overview' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/introduction-to-ethereum/evm-diagram.md -->
 
 ---
+
 title: EVM Diagram
 description: An overview of the Ethereum Virtual Machine
 hide_table_of_contents: false
+
 ---
 
 In this article, we'll examine the inner workings of the EVM, its components, and its role within the Ethereum network.
@@ -6545,14 +6538,14 @@ The EVM plays a vital role within the Ethereum network. By examining the EVM's k
 
 [the ethereum virtual machine (mastering ethereum)]: https://cypherpunks-core.github.io/ethereumbook/13evm.html#evm_architecture
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/introduction-to-ethereum/ethereum-applications.md -->
 
 ---
+
 title: Ethereum Applications
 description: An overview of the development ethos of Ethereum, applications built on its network, and a high-level comparison of Web2 and Web3
 hide_table_of_contents: false
+
 ---
 
 In this article, we'll explore Ethereum's significance and impact in the crypto ecosystem as well as its role in shaping the Web3 landscape. We'll learn about Ethereum's ethos and goals and also examine the different types of applications developed on Ethereum. Lastly, we'll take a look at the evolution of the web with an emphasis on comparing Web2 and Web3 development.
@@ -6742,28 +6735,28 @@ The evolution of the web has brought us from a static Web1 to a dynamic Web2, an
 
 [Ethereum Whitepaper]: https://ethereum.org/en/whitepaper/
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/introduction-to-ethereum/intro-to-ethereum-vid.md -->
 
 ---
+
 title: Introduction
 description: Welcome to the world of blockchain development!
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='813631865' title='Intro to Ethereum' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/introduction-to-ethereum/gas-use-in-eth-transactions.md -->
 
 ---
+
 title: Gas Use in Ethereum Transactions
 description: An overview of how gas works in Ethereum
 hide_table_of_contents: false
+
 ---
 
 In this article, we'll delve into the concept of gas and its importance in the Ethereum ecosystem. You'll learn why Ethereum relies on a system of gas to regulate the execution of transactions and smart contracts, and how it plays a crucial role in the proper functioning of the network.
@@ -6883,14 +6876,14 @@ Gas is a vital component of Ethereum. It's what regulates the execution of all t
 [Mastering Ethereum]: https://github.com/ethereumbook/ethereumbook
 [Ethereum demonimations]: https://www.gemini.com/en-US/cryptopedia/satoshi-value-gwei-to-ether-to-wei-converter-eth-gwei
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/minimal-tokens/minimal-tokens-exercise.md -->
 
 ---
+
 title: Minimal Tokens Exercise
 description: Exercise - Create your own token!
 hide_table_of_contents: false
+
 ---
 
 Create a contract that adheres to the following specifications.
@@ -6957,28 +6950,28 @@ import CafeUnitTest from '../../../src/components/CafeUnitTest/index.jsx'
 
 <CafeUnitTest nftNum={13}/>
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/minimal-tokens/creating-a-minimal-token-vid.md -->
 
 ---
+
 title: Create a Minimal Token
 description: Learn to build a very simple token.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='805035821' title='Creating a Minimal Token' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/minimal-tokens/minimal-token-sbs.md -->
 
 ---
+
 title: Minimal Token
 description: Build your own minimal token.
 hide_table_of_contents: false
+
 ---
 
 At their core, tokens are very simple. The technology powering famous NFT collections and fungible tokens worth vast amounts of money simply uses the EVM to keep track of who owns what, and provides a permissionless way for the owner to transfer what they own to someone new.
@@ -7160,42 +7153,42 @@ In this lesson, you've learned to implement a simple token, which is really just
 
 [zero address]: https://etherscan.io/address/0x0000000000000000000000000000000000000000
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/minimal-tokens/transferring-a-minimal-token-vid.md -->
 
 ---
+
 title: Transferring a Minimal Token
 description: Explore how tokens are given from one owner to another.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='805238335' title='Transferring a Minimal Token' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/arrays/arrays-in-solidity-vid.md -->
 
 ---
+
 title: Arrays
 description: Learn about the unique properties of arrays in Solidity.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='827438004' title='Arrays in Solidity' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/arrays/filtering-an-array-sbs.md -->
 
 ---
+
 title: Filtering an Array
 description: Explore techniques to filter an array.
 hide_table_of_contents: false
+
 ---
 
 In this exercise, you'll explore two different solutions for filtering an array in Solidity. By doing so, you'll gain a better understanding of the constraints present while working with arrays, and have the chance to learn and compare the gas costs of different approaches.
@@ -7444,14 +7437,14 @@ If `getEvenNumbers` will never be called by another contract, then using `numEve
 
 In this lesson, you've explored a few different approaches to a problem. You've learned how to filter an array, but more importantly, you've learned some of the specific considerations in blockchain development. Finally, you've seen that pushing 500 integers to an array, usually a trivial operation, is very large and very expensive on the EVM.
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/arrays/arrays-in-solidity.md -->
 
 ---
+
 title: Arrays
 description: An overview of how arrays work in Solidity.
 hide_table_of_contents: false
+
 ---
 
 Solidity arrays are collections of the same type, accessed via an index, the same as any other language. Unlike other languages, there are three types of arrays - _storage_, _memory_, and _calldata_. Each has their own properties and constraints.
@@ -7591,42 +7584,42 @@ In this lesson, you've learned the differences between the `memory`, `storage`, 
 [quote the docs]: https://docs.soliditylang.org/en/v0.8.17/types.html?#data-location-and-assignment-behaviour
 [slices]: https://docs.soliditylang.org/en/v0.8.17/types.html?#array-slices
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/arrays/fixed-size-arrays-vid.md -->
 
 ---
+
 title: Fixed-Size Arrays
 description: Learn about fixed-size arrays.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='806136952' title='Fixed-Size Arrays' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/arrays/writing-arrays-in-solidity-vid.md -->
 
 ---
+
 title: Writing Arrays
 description: Learn how to write arrays in Solidity.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='806137037' title='Writing Arrays in Solidity' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/arrays/arrays-exercise.md -->
 
 ---
+
 title: Arrays Exercise
 description: Exercise - Demonstrate your knowledge of arrays.
 hide_table_of_contents: false
+
 ---
 
 Create a contract that adheres to the following specifications.
@@ -7715,42 +7708,42 @@ import CafeUnitTest from '../../../src/components/CafeUnitTest/index.jsx'
 
 <CafeUnitTest nftNum={4}/>
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/arrays/array-storage-layout-vid.md -->
 
 ---
+
 title: Array Storage Layout
 description: Learn how arrays are kept in storage.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='806136995' title='Array Storage Layout' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-verify/hardhat-verify-vid.md -->
 
 ---
+
 title: Verifying Smart Contracts
 description: Verify your contracts with Hardhat.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='844046789' title='Verifying Smart Contracts' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-verify/hardhat-verify-sbs.md -->
 
 ---
+
 title: Verifying Smart Contracts
 description: Verifying smart contracts with Hardhat.
 hide_table_of_contents: false
+
 ---
 
 In this article, you'll learn how to verify smart contracts in Etherscan with hardhat and the hardhat deploy plugin.
@@ -7857,14 +7850,14 @@ In this lesson, you've learned how to verify smart contracts using Hardhat and H
 [Remix Project]: https://remix-project.org/
 [Hardhat Deploy]: https://github.com/wighawag/hardhat-deploy
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/mappings/mappings-exercise.md -->
 
 ---
+
 title: Mappings Exercise
 description: Exercise - Demonstrate your knowledge of mappings.
 hide_table_of_contents: false
+
 ---
 
 Create a contract that adheres to the following specifications.
@@ -7932,42 +7925,42 @@ import CafeUnitTest from '../../../src/components/CafeUnitTest/index.jsx'
 
 <CafeUnitTest nftNum={5} />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/mappings/how-mappings-are-stored-vid.md -->
 
 ---
+
 title: How Mappings are Stored
 description: Learn about `msg.sender`.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='804479611' title='How Mappings are Stored' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/mappings/using-msg-sender-vid.md -->
 
 ---
+
 title: Using `msg.sender`
 description: Learn about `msg.sender`.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='804479641' title='Using `msg.sender`' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/mappings/mappings-sbs.md -->
 
 ---
+
 title: Mappings
 description: Use the mapping data type to store key-value pairs.
 hide_table_of_contents: false
+
 ---
 
 In Solidity, the hashtable/hashmap/dictionary-comparable type used to store key-value pairs is called a `mapping`. `mapping`s are a powerful tool with many uses, but they also have some unexpected limitations. They also **aren't** actually hash tables!
@@ -8113,7 +8106,6 @@ contract Mappings {
 
 To return all of the favorite numbers, you can then iterate through `addressesOfFavs`, look up that addresses' favorite number, add it to a return array, and then return the array when you're done.
 
-
 <details>
 
 <summary>Reveal code</summary>
@@ -8202,70 +8194,70 @@ In this lesson, you've learned how to use the `mapping` data type to store key-v
 [shuffled deck of cards]: https://czep.net/weblog/52cards.html
 [global variable]: https://docs.soliditylang.org/en/v0.8.17/units-and-global-variables.html
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/mappings/mappings-vid.md -->
 
 ---
+
 title: Mappings
 description: Learn about mappings.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='804479619' title='Mappings' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-deploy/deployment-vid.md -->
 
 ---
+
 title: Deployment
 description: Configure test networks.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='844046070' title='Deployment' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-deploy/installing-hardhat-deploy-vid.md -->
 
 ---
+
 title: Installing Hardhat Deploy
 description: Install a community plugin that makes deployments easier.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='841276722' title='Installing Hardhat Deploy' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-deploy/setup-deploy-script-vid.md -->
 
 ---
+
 title: Setting up the Deploy Script
 description: Prepare a script to deploy your contract.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='841279882' title='Setting up the Deploy Script' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-deploy/hardhat-deploy-sbs.md -->
 
 ---
+
 title: Deploying Smart Contracts
 description: Deploy smart contracts with hardhat deploy and hardhat
 hide_table_of_contents: false
+
 ---
 
 In this article, you'll learn how to deploy smart contracts to multiple Blockchain networks using Hardhat and Hardhat deploy.
@@ -8295,7 +8287,7 @@ To install:
 1. Run `npm install -D hardhat-deploy`. Then, import hardhat-deploy in `hardhat.config.ts`:
 
 ```tsx
-import 'hardhat-deploy';
+import "hardhat-deploy";
 ```
 
 2. Create a folder called deploy and inside it create a new file called `001_deploy_lock.ts`.
@@ -8303,8 +8295,8 @@ import 'hardhat-deploy';
 3. Include the following:
 
 ```tsx
-import { HardhatRuntimeEnvironment } from 'hardhat/types';
-import { DeployFunction } from 'hardhat-deploy/types';
+import { HardhatRuntimeEnvironment } from "hardhat/types";
+import { DeployFunction } from "hardhat-deploy/types";
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   // code here
@@ -8335,7 +8327,7 @@ export default func;
 
 ```tsx
 const config: HardhatUserConfig = {
-  solidity: '0.8.23',
+  solidity: "0.8.23",
   namedAccounts: {
     deployer: 0,
   },
@@ -8345,9 +8337,9 @@ const config: HardhatUserConfig = {
 7. Implement the deploy function by including the following in the `001_deploy_lock.ts` file:
 
 ```tsx
-import { HardhatRuntimeEnvironment } from 'hardhat/types';
-import { DeployFunction } from 'hardhat-deploy/types';
-import { ethers } from 'hardhat';
+import { HardhatRuntimeEnvironment } from "hardhat/types";
+import { DeployFunction } from "hardhat-deploy/types";
+import { ethers } from "hardhat";
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deploy } = hre.deployments;
@@ -8355,18 +8347,19 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await hre.getNamedAccounts();
 
   // The value we want to lock
-  const VALUE_LOCKED = hre.ethers.parseEther('0.01');
+  const VALUE_LOCKED = hre.ethers.parseEther("0.01");
 
   // The unlock time after deployment
   const UNLOCK_TIME = 10000;
 
   // We use ethers to get the current time stamp
   const blockNumber = await ethers.provider.getBlockNumber();
-  const lastBlockTimeStamp = (await ethers.provider.getBlock(blockNumber))?.timestamp as number;
+  const lastBlockTimeStamp = (await ethers.provider.getBlock(blockNumber))
+    ?.timestamp as number;
 
   // We say we want to deploy our Lock contract using the deployer
   // account and passing the value and arguments.
-  await deploy('Lock', {
+  await deploy("Lock", {
     from: deployer,
     args: [lastBlockTimeStamp + UNLOCK_TIME],
     value: VALUE_LOCKED.toString(),
@@ -8376,7 +8369,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 export default func;
 
 // This tag will help us in the next section to trigger this deployment file programmatically
-func.tags = ['DeployAll'];
+func.tags = ["DeployAll"];
 ```
 
 ## Testing your deployment
@@ -8386,7 +8379,7 @@ The easiest way to test your deployment is by modifying the test.
 Go to `Lock.ts` and include in the imports the following:
 
 ```tsx
-import { ethers, deployments } from 'hardhat';
+import { ethers, deployments } from "hardhat";
 ```
 
 `deployments` will allow you to execute the deployment files from your test.
@@ -8401,8 +8394,8 @@ before(async () => {
   ownerSigner = signers[0];
   otherUserSigner = signers[1];
 
-  await deployments.fixture(['DeployAll']);
-  const lockDeployment = await deployments.get('Lock');
+  await deployments.fixture(["DeployAll"]);
+  const lockDeployment = await deployments.get("Lock");
 
   lockInstance = Lock__factory.connect(lockDeployment.address, ownerSigner);
 });
@@ -8413,7 +8406,7 @@ Notice how you execute `deployments.fixture` and pass a tag that matches the one
 The deployment file is then executed and you can then reuse that functionality and simply consume the address of the newly-deployed contract by using:
 
 ```tsx
-const lockDeployment = await deployments.get('Lock');
+const lockDeployment = await deployments.get("Lock");
 ```
 
 Reuse `Lock__factory` but use the connect function and pass the address of the newly-created contract plus a signer. Then, run `npx hardhat test` and you should get the same result:
@@ -8442,21 +8435,23 @@ Include the following in the `hardhat.config.ts` file:
 
 ```tsx
 const config: HardhatUserConfig = {
-  solidity: '0.8.18',
+  solidity: "0.8.18",
   namedAccounts: {
     deployer: 0,
   },
   networks: {
     base_sepolia: {
-      url: 'https://sepolia.base.org',
+      url: "https://sepolia.base.org",
       accounts: {
-        mnemonic: process.env.MNEMONIC ?? '',
+        mnemonic: process.env.MNEMONIC ?? "",
       },
     },
     sepolia: {
-      url: `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_SEPOLIA_KEY ?? ''}`,
+      url: `https://eth-sepolia.g.alchemy.com/v2/${
+        process.env.ALCHEMY_SEPOLIA_KEY ?? ""
+      }`,
       accounts: {
-        mnemonic: process.env.MNEMONIC ?? '',
+        mnemonic: process.env.MNEMONIC ?? "",
       },
     },
   },
@@ -8484,7 +8479,7 @@ npm install -D dotenv
 Then, include the following in the `hardhat.config.ts` file:
 
 ```tsx
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 
 dotenv.config();
 ```
@@ -8524,42 +8519,42 @@ In this lesson, you've learned how to deploy smart contracts using Hardhat and H
 [Hardhat]: https://hardhat.org/
 [Hardhat Deploy]: https://github.com/wighawag/hardhat-deploy
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-deploy/test-network-configuration-vid.md -->
 
 ---
+
 title: Test Network Configuration
 description: Configure test networks.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='844045131' title='Test Network Configuration' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-deploy/testing-our-deployment-vid.md -->
 
 ---
+
 title: Testing Our Deployment
 description: Test the newly created deploy script.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='841281515' title='Testing Our Deployment' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/contracts-and-basic-functions/basic-functions-exercise.md -->
 
 ---
+
 title: 'Basic Functions Exercise'
 description: Exercise - Create and deploy a contract with simple math functions.
 hide_table_of_contents: false
+
 ---
 
 Each module in this course will contain exercises in which you are given a specification for a contract **without** being given specific instructions on how to build the contract. You must use what you've learned to figure out the best solution on your own!
@@ -8596,14 +8591,14 @@ A function called `subtractor`. It must:
 - If `_a` - `_b` does not underflow, it should return the `difference` and an `error` of `false`
 - If `_a` - `_b` underflows, it should return `0` as the `difference`, and an `error` of `true`
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/contracts-and-basic-functions/basic-types.md -->
 
 ---
+
 title: Basic Types
 description: Introduction to basic types in Solidity.
 hide_table_of_contents: false
+
 ---
 
 Solidity contains most of the basic [types] you are used to from other languages, but their properties and usage are often a little different than other languages and are likely much more restrictive. In particular, Solidity is a very **explicit** language and will not allow you to make inferences most of the time.
@@ -8821,28 +8816,28 @@ You've learned the usage and some of the unique quirks of common variable types 
 [constant and immutable]: https://docs.soliditylang.org/en/v0.8.17/contracts.html?constant-and-immutable-state-variables#constant-and-immutable-state-variables
 [value types]: https://docs.soliditylang.org/en/v0.8.17/types.html#value-types
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/contracts-and-basic-functions/intro-to-contracts-vid.md -->
 
 ---
+
 title: Introduction to Contracts
 description: Learn about the core structure of EVM programs.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='805035762' title='Introduction to Contracts' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/contracts-and-basic-functions/hello-world-step-by-step.md -->
 
 ---
+
 title: Hello World
 description: Write your first contract with Solidity.
 hide_table_of_contents: false
+
 ---
 
 As is tradition, we'll begin coding with a variant of "Hello World" written as a smart contract. There isn't really a console to write to\*, so instead, we'll write a contract that says hello to the sender, using the name they provide.
@@ -9045,28 +9040,28 @@ You also learned more about some of the ways in which Solidity is more challengi
 [modifiers]: https://docs.soliditylang.org/en/v0.8.17/cheatsheet.html?#modifiers
 [tuple]: https://en.wikipedia.org/wiki/Tuple
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/erc-20-token/erc-20-testing-vid.md -->
 
 ---
+
 title: ERC-20 Testing
 description: Test the OpenZeppelin ERC-20 implementation.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='805035929' title='ERC-20 Testing' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/erc-20-token/erc-20-token-sbs.md -->
 
 ---
+
 title: ERC-20 Implementation
 description: Implement your own ERC-20 token.
 hide_table_of_contents: false
+
 ---
 
 The ERC-20 is a standard that allows for the development of fungible tokens and helps sites and apps, such as exchanges, know how to find and display information about these tokens. You can leverage existing implementations, such as the one by [OpenZeppelin] to develop your own tokens.
@@ -9162,7 +9157,6 @@ constructor(string memory _name, string memory _symbol) ERC20(_name, _symbol) {
 
 <br/>
 
-
 **Switch back** to the first account and redeploy. Test to confirm that each account has the appropriate amount of tokens.
 
 ### Testing the Transfer Function
@@ -9207,14 +9201,14 @@ In this lesson, you've learned how easy it is to create an ERC-20 compliant toke
 
 [OpenZeppelin]: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/erc-20-token/erc-20-standard.md -->
 
 ---
+
 title: The ERC-20 Token Standard
 description: An overview of the ERC-20 token standard
 hide_table_of_contents: false
+
 ---
 
 In this article, we'll delve into the structure and specifications of ERC-20 tokens, uncovering the key elements that contribute to their widespread adoption and diverse use cases.
@@ -9307,14 +9301,14 @@ By providing a consistent framework for fungible tokens and adhering to the form
 - [EIP-20: ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC-20 Token Standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/)
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/erc-20-token/erc-20-exercise.md -->
 
 ---
+
 title: ERC-20 Tokens Exercise
 description: Exercise - Create your own ERC-20 token!
 hide_table_of_contents: false
+
 ---
 
 Create a contract that adheres to the following specifications.
@@ -9437,56 +9431,56 @@ import CafeUnitTest from '../../../src/components/CafeUnitTest/index.jsx'
 
 <CafeUnitTest nftNum={14}/>
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/erc-20-token/analyzing-erc-20-vid.md -->
 
 ---
+
 title: Analyzing the ERC-20 Standard
 description: Explore the ERC-20 standard.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='805035875' title='Analyzing the ERC-20 Token' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/erc-20-token/openzeppelin-erc-20-vid.md -->
 
 ---
+
 title: OpenZeppelin ERC-20 Implementation
 description: Review a popular implementation of the ERC-20 standard.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='805035901' title='OpenZeppelin ERC-20' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-testing/contract-abi-and-testing-vid.md -->
 
 ---
+
 title: Contract ABIs and Testing
 description: Learn how the contract ABI is related to writing tests.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='840621876' title='Contract ABIs and Testing' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-testing/hardhat-testing-sbs.md -->
 
 ---
+
 title: Testing with Hardhat and Typechain
 description: Testing smart contracts with Hardhat and Typechain.
 hide_table_of_contents: false
+
 ---
 
 In this article, you'll learn how to test smart contracts with Hardhat and Typechain.
@@ -9525,10 +9519,10 @@ In the following, you reuse this smart contract but rewrite the test using Typec
 To remove the body of the `Lock.ts` file:
 
 ```tsx
-import { expect } from 'chai';
-import { ethers } from 'hardhat';
+import { expect } from "chai";
+import { ethers } from "hardhat";
 
-describe('Lock', function () {});
+describe("Lock", function () {});
 ```
 
 Then, import two files from `typechain-types`, `Lock`, and `Lock__Factory`.
@@ -9569,24 +9563,24 @@ Start with the value locked, however you must set up a `before` function, which 
 Then, include some new imports and variables:
 
 ```tsx
-import { expect } from 'chai';
-import { ethers } from 'hardhat';
+import { expect } from "chai";
+import { ethers } from "hardhat";
 
 // A helper utility to get the timestamp.
-import { time } from '@nomicfoundation/hardhat-network-helpers';
+import { time } from "@nomicfoundation/hardhat-network-helpers";
 
 // We import this type to have our signers typed.
-import { SignerWithAddress } from '@nomicfoundation/hardhat-ethers/signers';
+import { SignerWithAddress } from "@nomicfoundation/hardhat-ethers/signers";
 
 // Types from typechain
-import { Lock__factory, Lock } from '../typechain-types';
+import { Lock__factory, Lock } from "../typechain-types";
 
-describe('Lock', function () {
+describe("Lock", function () {
   // This represents the time in the future we expect to release the funds locked.
   const UNLOCK_TIME = 10000;
 
   // The amount of ether we plan to lock.
-  const VALUE_LOCKED = ethers.parseEther('0.01');
+  const VALUE_LOCKED = ethers.parseEther("0.01");
 
   // This variable will store the last block timestamp.
   let lastBlockTimeStamp: number;
@@ -9637,7 +9631,7 @@ The first test case should verify that the `unlockTime` variable is correct.
 <summary>Reveal code</summary>
 
 ```tsx
-it('should get the unlockTime value', async () => {
+it("should get the unlockTime value", async () => {
   // we get the value from the contract
   const unlockTime = await lockInstance.unlockTime();
 
@@ -9672,7 +9666,7 @@ Create a new test case:
 <summary>Reveal code</summary>
 
 ```tsx
-it('should have the right ether balance', async () => {
+it("should have the right ether balance", async () => {
   // Get the Lock contract address
   const lockInstanceAddress = await lockInstance.getAddress();
 
@@ -9706,7 +9700,7 @@ Similar to the previous test cases, you can verify that the owner is correct.
 <summary>Reveal code</summary>
 
 ```tsx
-it('should have the right owner', async () => {
+it("should have the right owner", async () => {
   // Notice ownerSigned has an address property
   expect(await lockInstance.owner()).to.equal(ownerSigner.address);
 });
@@ -9740,7 +9734,9 @@ For example, the following code checks that an attempt to call the function `wit
 
 ```tsx
 it('shouldn"t allow to withdraw before unlock time', async () => {
-  await expect(lockInstance.withdraw()).to.be.revertedWith("You can't withdraw yet");
+  await expect(lockInstance.withdraw()).to.be.revertedWith(
+    "You can't withdraw yet"
+  );
 });
 ```
 
@@ -9761,7 +9757,9 @@ it('shouldn"t allow to withdraw a non owner', async () => {
   const newInstanceUsingAnotherSigner = lockInstance.connect(otherUserSigner);
 
   // We attempt to withdraw, but since the sender is not the owner, it will revert.
-  await expect(newInstanceUsingAnotherSigner.withdraw()).to.be.revertedWith("You aren't the owner");
+  await expect(newInstanceUsingAnotherSigner.withdraw()).to.be.revertedWith(
+    "You aren't the owner"
+  );
 });
 ```
 
@@ -9772,8 +9770,10 @@ Finally, test that the owner can withdraw. You can manipulate the time similarly
 <summary>Reveal code</summary>
 
 ```tsx
-it('should allow to withdraw an owner', async () => {
-  const balanceBefore = await ethers.provider.getBalance(await lockInstance.getAddress());
+it("should allow to withdraw an owner", async () => {
+  const balanceBefore = await ethers.provider.getBalance(
+    await lockInstance.getAddress()
+  );
 
   // Its value will be the one we lock at deployment time.
   expect(balanceBefore).to.equal(VALUE_LOCKED);
@@ -9787,7 +9787,9 @@ it('should allow to withdraw an owner', async () => {
   await lockInstance.withdraw();
 
   // Get new balance and assert that is 0
-  const balanceAfter = await ethers.provider.getBalance(await lockInstance.getAddress());
+  const balanceAfter = await ethers.provider.getBalance(
+    await lockInstance.getAddress()
+  );
   expect(balanceAfter).to.equal(0);
 });
 ```
@@ -9822,84 +9824,84 @@ In this lesson, you've learned how to test smart contracts using Hardhat and Typ
 [Remix Project]: https://remix-project.org/
 [Hardhat]: https://hardhat.org/
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-testing/writing-tests-vid.md -->
 
 ---
+
 title: Writing Tests
 description: An introduction to writing tests.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='840620773' title='Testing Overview' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-testing/testing-overview-vid.md -->
 
 ---
+
 title: Testing Overview
 description: An overview of writing tests in Hardhat.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='840618938' title='Testing Overview' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/introduction-to-solidity/anatomy-of-a-smart-contract-vid.md -->
 
 ---
+
 title: Anatomy of a Smart Contract
 description: Review how smart contracts are organized.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='816714891' title='Anatomy of a Smart Contract' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/introduction-to-solidity/introduction-to-remix-vid.md -->
 
 ---
+
 title: Introduction to Remix
 description: Learn about the Remix online IDE.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='804478378' title='Introduction to Remix' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/introduction-to-solidity/deployment-in-remix-vid.md -->
 
 ---
+
 title: Deployment in Remix
 description: Learn to deploy your contracts to the Remix VM.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='804476884' title='Deployment in Remix' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/introduction-to-solidity/solidity-overview.md -->
 
 ---
+
 title: 'Solidity Overview'
 description: An overview of the Solidity programming language.
 hide_table_of_contents: false
+
 ---
 
 In this article, you'll learn about the origins and history of Solidity, where to find the docs, and review some of the considerations that make programming in Solidity relatively unique. You'll also learn about how to get started with development!
@@ -10059,28 +10061,28 @@ On the surface, Solidity is very similar to other programming languages; most de
 [Remix Project]: https://remix-project.org/
 [Hardhat]: https://hardhat.org/
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/introduction-to-solidity/introduction-to-solidity-vid.md -->
 
 ---
+
 title: Introduction
 description: Learn about the Solidity programming language.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='808096815' title='Introduction to Solidity' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/introduction-to-solidity/deployment-in-remix.md -->
 
 ---
+
 title: Deployment in Remix
 description: Use Remix to deploy and interact with a contract.
 hide_table_of_contents: false
+
 ---
 
 Remix contains a simulation of the blockchain that allows you to easily and safely deploy and interact with contracts, for free.
@@ -10178,14 +10180,14 @@ Remix makes it easy to write, deploy, and test contracts. Contracts are deployed
 [default value]: https://docs.soliditylang.org/en/v0.8.17/control-structures.html#scoping-and-declarations
 [_ABI_]: https://docs.soliditylang.org/en/v0.8.13/abi-spec.html
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/introduction-to-solidity/introduction-to-remix.md -->
 
 ---
+
 title: 'Introduction to Remix'
 description: An introduction to the Remix online IDE.
 hide_table_of_contents: false
+
 ---
 
 # Introduction to Remix
@@ -10274,14 +10276,14 @@ Remix is a robust editor with many features and one or two gotchas. It is an exc
 
 [remix.ethereum.org]: https://remix.ethereum.org
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/introduction-to-solidity/introduction-to-solidity-overview.md -->
 
 ---
+
 title: 'Overview'
 description: An overview of this module.
 hide_table_of_contents: false
+
 ---
 
 The course you are about to begin is designed to rapidly and thoroughly teach web3 concepts and language to web2 developers. It specifically highlights similarities and differences found in web3 vs. web2 and contains background information, guided coding practices, and independent exercises.
@@ -10356,14 +10358,14 @@ By the end of this module, you should be able to:
 
 [curly-bracket]: https://en.wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/events/hardhat-events-sbs.md -->
 
 ---
+
 title: Events
 description: Events in Solidity
 hide_table_of_contents: false
+
 ---
 
 In this article, you'll learn how events work in Solidity by reviewing some practical examples and common use cases of events.
@@ -10646,28 +10648,28 @@ Now that you have a solid grasp of events and their versatile applications, you 
 [events]: https://docs.soliditylang.org/en/latest/contracts.html#events
 [The Graph]: https://thegraph.com/
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/new-keyword/creating-a-new-contract-vid.md -->
 
 ---
+
 title: Creating a `new` Contract
 description: Use the `new` keyword to create a contract that can create contracts.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='823513272' title='Creating a `new` Contract' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/new-keyword/new-keyword-sbs.md -->
 
 ---
+
 title: The New Keyword
 description: Learn to create a contract that creates other contracts.
 hide_table_of_contents: false
+
 ---
 
 You've seen the `new` keyword and used it to instantiate `memory` arrays with a size based on a variable. You can also use it to write a contract that [creates other contracts].
@@ -10785,14 +10787,14 @@ In this lesson, you learned how to deploy contracts from another contract by usi
 
 [creates other contracts]: https://docs.soliditylang.org/en/v0.8.17/control-structures.html?#creating-contracts-via-new
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/new-keyword/new-keyword-exercise.md -->
 
 ---
+
 title: New Exercise
 description: Exercise - Demonstrate your knowledge of the `new` keyword.
 hide_table_of_contents: false
+
 ---
 
 For this exercise, we're challenging you to build a solution requiring you to use a number of the concepts you've learned so far. Have fun and enjoy!
@@ -10881,15 +10883,15 @@ import CafeUnitTest from '../../../src/components/CafeUnitTest/index.jsx'
 
 [Ownable]: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/help-on-discord.md -->
 
 ---
+
 title: Get Help on Discord
 description: Discover how to get help with Base Learn on Discord.
 hide_table_of_contents: false
 image: /img/base-learn-open-graph.png
+
 ---
 
 Need help?
@@ -10903,14 +10905,14 @@ Then, get help from the community, Based Advocates, and the authors of the progr
 [Base Discord]: https://base.org/discord
 [Base Learn Channel]: https://discord.com/channels/1067165013397213286/1108389436644917328
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-forking/hardhat-forking.md -->
 
 ---
+
 title: Hardhat Forking
 description: Learn how to fork
 hide_table_of_contents: false
+
 ---
 
 In this article, you'll learn how to fork smart contracts in Ethereum mainnet using Hardhat.
@@ -11016,21 +11018,21 @@ Also notice that forking is enabled by specifying `enabled: true`, however this 
 Create a test file in the test folder called `BalanceReader.ts` and include the following:
 
 ```tsx
-import { Signer } from 'ethers';
-import { ethers } from 'hardhat';
+import { Signer } from "ethers";
+import { ethers } from "hardhat";
 
-import { BalanceReader, BalanceReader__factory } from '../typechain-types';
+import { BalanceReader, BalanceReader__factory } from "../typechain-types";
 
-describe('BalanceReader tests', () => {
+describe("BalanceReader tests", () => {
   let instance: BalanceReader;
   let accounts: Signer[];
 
   // Configure the addresses we can to check balances for
-  const USDC_MAINNET_ADDRESS = '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48'; // https://etherscan.io/token/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
-  const ARBITRUM_ONE_GATEWAY = '0xcEe284F754E854890e311e3280b767F80797180d';
+  const USDC_MAINNET_ADDRESS = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"; // https://etherscan.io/token/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+  const ARBITRUM_ONE_GATEWAY = "0xcEe284F754E854890e311e3280b767F80797180d";
   const USDC_DECIMALS = 6;
 
-  it('gets arbitrum gateway balance', async () => {
+  it("gets arbitrum gateway balance", async () => {
     // We get signers as in a normal test
     accounts = await ethers.getSigners();
     const factory = new BalanceReader__factory(accounts[0]);
@@ -11039,12 +11041,15 @@ describe('BalanceReader tests', () => {
     instance = await factory.deploy();
 
     // Our contract will be able to check the balances of the mainnet deployed contracts and address
-    const balance = await instance.getERC20BalanceOf(ARBITRUM_ONE_GATEWAY, USDC_MAINNET_ADDRESS);
+    const balance = await instance.getERC20BalanceOf(
+      ARBITRUM_ONE_GATEWAY,
+      USDC_MAINNET_ADDRESS
+    );
     const balanceAsString = ethers.formatUnits(balance, USDC_DECIMALS);
 
     console.log(
-      'The USDC Balance of Arbitrum Gateway is $',
-      Number(balanceAsString).toLocaleString(),
+      "The USDC Balance of Arbitrum Gateway is $",
+      Number(balanceAsString).toLocaleString()
     );
   });
 });
@@ -11085,28 +11090,28 @@ In this lesson, you've learned how to use hardhat forking capabilities to test s
 [Hardhat Deploy]: https://github.com/wighawag/hardhat-deploy
 [Hardhat Forking]: https://hardhat.org/hardhat-network/docs/guides/forking-other-networks
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/hardhat-forking/mainnet-forking-vid.md -->
 
 ---
+
 title: Forking Mainnet
 description: Create a copy of the mainnet to run advanced tests.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='844047412' title='Mainnet Forking' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/deployment-to-testnet/deployment-to-base-sepolia-sbs.md -->
 
 ---
+
 title: Deployment to Base Sepolia
 description: Deploy your smart contract to a test network.
 hide_table_of_contents: false
+
 ---
 
 Remix contains a simulation of a blockchain that you can use to rapidly deploy and test your contracts. This simulation only exists within your browser so you can't share it with others, use external tools, or a front end to interact with it. However, you can also deploy to a variety of testnets from within Remix. Doing so will allow you to share your contract with others, at the cost of making it public.
@@ -11207,20 +11212,21 @@ You now have the power to put smart contracts on the blockchain! You've only dep
 [coinbase]: https://www.coinbase.com/wallet
 [metamask]: https://metamask.io/
 [faucet]: https://docs.base.org/tools/network-faucets
-[set up]: 
+
+[set up]:
 [coinbase settings]: https://docs.cloud.coinbase.com/wallet-sdk/docs/developer-settings
 [Metamask Settings]: https://support.metamask.io/hc/en-us/articles/13946422437147-How-to-view-testnets-in-MetaMask
 [BaseScan]: https://sepolia.basescan.org/
 [faucets on the web]: https://coinbase.com/faucets
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/deployment-to-testnet/test-networks.md -->
 
 ---
+
 title: Test Networks
 description: An overview of Base test networks
 hide_table_of_contents: false
+
 ---
 
 This article provides a concise overview of Base test networks, highlighting their advantages, potential challenges, and comparing some of the most popular testnets.
@@ -11311,28 +11317,28 @@ Ethereum and L2 testnets are essential for the safe and efficient development of
 - [Networks](https://ethereum.org/en/developers/docs/networks/)
 - [The History of Ethereum Testnets](https://consensys.net/blog/news/the-history-of-ethereum-testnets/)
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/deployment-to-testnet/overview-of-test-networks-vid.md -->
 
 ---
+
 title: Overview of Test Networks
 description: Learn about test networks.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='832071141' title='Overview of Test Networks' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/deployment-to-testnet/deployment-to-testnet-exercise.md -->
 
 ---
+
 title: 'Deployment Exercise'
 description: Exercise - Deploy your basic math contract and earn an NFT.
 hide_table_of_contents: false
+
 ---
 
 You've already built and deployed your [Basic Math] contract for this exercise. Now it's time to submit the address and earn an NFT pin to commemorate your accomplishment!
@@ -11367,14 +11373,14 @@ import CafeUnitTest from '../../../src/components/CafeUnitTest/index.jsx'
 
 [basic math]: ../contracts-and-basic-functions/basic-functions-exercise
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/deployment-to-testnet/contract-verification-sbs.md -->
 
 ---
+
 title: Contract Verification
 description: Verify your contract and interact with it.
 hide_table_of_contents: false
+
 ---
 
 Once your contract is deployed, you can verify it using a number of popular services. Doing so will let your users have confidence that your contract does what you claim, and will allow you to interact with it using a similar interface to what you used in Remix.
@@ -11442,19 +11448,20 @@ With your contracts verified, you can interact with them using online tools and 
 [`sepolia.basescan.org`]: https://sepolia.basescan.org/
 [coinbase]: https://www.coinbase.com/wallet
 [faucet]: https://docs.base.org/tools/network-faucets
-[set up]: 
+
+[set up]:
 [coinbase settings]: https://docs.cloud.coinbase.com/wallet-sdk/docs/developer-settings
 [BaseScan]: https://sepolia.basescan.org/
 [faucets on the web]: https://coinbase.com/faucets
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/interfaces/testing-the-interface-vid.md -->
 
 ---
+
 title: Testing the Interface
 description: Start writing tests for interfaces.
 hide_table_of_contents: false
+
 ---
 
 :::caution
@@ -11467,14 +11474,14 @@ import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='877160111' title='Testing the Interface' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/interfaces/calling-another-contract-vid.md -->
 
 ---
+
 title: Calling Another Contract
 description: Call the functions in another contract from your own contract.
 hide_table_of_contents: false
+
 ---
 
 :::caution
@@ -11487,14 +11494,14 @@ import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='877157748' title='Calling Another Contract' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/interfaces/intro-to-interfaces-vid.md -->
 
 ---
+
 title: Intro to Interfaces
 description: Use interfaces to tell your contract how another works.
 hide_table_of_contents: false
+
 ---
 
 :::caution
@@ -11507,14 +11514,14 @@ import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='877151475' title='Intro to Interfaces' />
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/interfaces/contract-to-contract-interaction.md -->
 
 ---
+
 title: 'Contract to Contract Interaction'
 description: Interact with other smart contracts
 hide_table_of_contents: false
+
 ---
 
 In this article, you'll learn how to interact with other smart contracts using interfaces and the `.call()` function, which allows you to interact with other smart contracts without using an interface.
@@ -11643,13 +11650,18 @@ interface IUniswapV3Factory {
 Then, create a test file called `PoolCreator.test.ts` with the following content:
 
 ```tsx
-import { ethers } from 'hardhat';
-import { HardhatEthersSigner } from '@nomicfoundation/hardhat-ethers/signers';
+import { ethers } from "hardhat";
+import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
 
-import { Token, Token__factory, PoolCreator, PoolCreator__factory } from '../typechain-types';
+import {
+  Token,
+  Token__factory,
+  PoolCreator,
+  PoolCreator__factory,
+} from "../typechain-types";
 
-describe('PoolCreator tests', function () {
-  const UNISWAP_FACTORY_ADDRESS = '0x1F98431c8aD98523631AE4a59f267346ea31F984';
+describe("PoolCreator tests", function () {
+  const UNISWAP_FACTORY_ADDRESS = "0x1F98431c8aD98523631AE4a59f267346ea31F984";
   let tokenA: Token;
   let tokenB: Token;
   let poolCreator: PoolCreator;
@@ -11658,14 +11670,24 @@ describe('PoolCreator tests', function () {
   before(async () => {
     const signers = await ethers.getSigners();
     owner = signers[0];
-    tokenA = await new Token__factory().connect(owner).deploy('TokenA', 'TokenA');
-    tokenB = await new Token__factory().connect(owner).deploy('TokenB', 'TokenB');
-    poolCreator = await new PoolCreator__factory().connect(owner).deploy(UNISWAP_FACTORY_ADDRESS);
+    tokenA = await new Token__factory()
+      .connect(owner)
+      .deploy("TokenA", "TokenA");
+    tokenB = await new Token__factory()
+      .connect(owner)
+      .deploy("TokenB", "TokenB");
+    poolCreator = await new PoolCreator__factory()
+      .connect(owner)
+      .deploy(UNISWAP_FACTORY_ADDRESS);
   });
 
-  it('should create a pool', async () => {
-    const contractAddress = await poolCreator.createPool.staticCall(tokenA, tokenB, 500);
-    console.log('Contract Address', contractAddress);
+  it("should create a pool", async () => {
+    const contractAddress = await poolCreator.createPool.staticCall(
+      tokenA,
+      tokenB,
+      500
+    );
+    console.log("Contract Address", contractAddress);
     await poolCreator.createPool(tokenA, tokenB, 500);
   });
 });
@@ -11778,14 +11800,14 @@ On the other hand, the `.call` function offers more flexibility but comes with g
 [Uniswap V3 core package]: https://www.npmjs.com/package/@uniswap/v3-core
 [Deployment addresses of the contracts]: https://docs.uniswap.org/contracts/v3/reference/deployments
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/etherscan/etherscan-sbs.md -->
 
 ---
+
 title: Etherscan
 description: Learn about Etherscan
 hide_table_of_contents: false
+
 ---
 
 In this article, you'll learn about Etherscan, a blockchain explorer to inspect the Blockchain state and activity.
@@ -11898,18 +11920,16 @@ In this lesson, you've learned some of the main features of Etherscan, including
 [Base Sepolia]: https://sepolia.basescan.org
 [Sepolia Etherscan]: https://sepolia.etherscan.io
 
-
-
 <!-- File: ../web/apps/base-docs/base-learn/docs/etherscan/etherscan-vid.md -->
 
 ---
+
 title: Etherscan
 description: Use Etherscan to interact with your own and others's contracts.
 hide_table_of_contents: false
+
 ---
 
 import Video from '../../../src/components/VideoPlayer/index.jsx'
 
 <Video videoId='841274068' title='Etherscan' />
-
-
