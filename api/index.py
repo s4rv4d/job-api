@@ -280,5 +280,29 @@ def get_apps():
 		    "message": "Failed to fetch job listings", "status": 500
 		}), 500
 
+@app.route("/notable_people_on_base", methods=['GET'])
+def get_people():
+    with open("public/notable_people.json", "r", encoding="utf-8") as file:
+        mdx_content = json.load(file)
+    
+    if mdx_content:
+        return jsonify({"status": 200, "response": mdx_content}), 200
+    else:
+        return jsonify({
+			"message": "Failed to fetch job listings", "status": 500
+		}), 500
+
+@app.route("/base_tutorials", methods=['GET'])
+def get_tutorials():
+    with open("public/youtube_content.json", "r", encoding="utf-8") as file:
+        mdx_content = json.load(file)
+    
+    if mdx_content:
+        return jsonify({"status": 200, "response": mdx_content}), 200
+    else:
+        return jsonify({
+			"message": "Failed to fetch job listings", "status": 500
+		}), 500
+
 if __name__ == "__main__":
 	app.run(host="0.0.0.0", port=8080)

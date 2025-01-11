@@ -1,0 +1,127 @@
+[
+  {
+    "title": "Base Quickstart Overview",
+    "description": "A high-level introduction to Base, what itʼs all about, and how this documentation is structured to help you build on Coinbaseʼs Layer 2",
+    "link": "https://docs.base.org/base-learn/docs/welcome/"
+  },
+  {
+    "title": "What is Base?",
+    "description": "The origin story of Base, its purpose in the Ethereum scaling ecosystem, and how it leverages the OP Stack to offer fast, low-cost transactions.",
+    "link": "https://docs.base.org/base-learn/docs/what-is-base"
+  },
+  {
+    "title": "Key Concepts: Ethereum + OP Stack",
+    "description": "The fundamental ideas behind Base, including how it inherits security from Ethereum and how transactions are processed via the Optimistic Rollup architecture.",
+    "link": "https://docs.base.org/base-learn/docs/key-concepts"
+  },
+  {
+    "title": "Performance & Costs on Base",
+    "description": "An overview of Baseʼs throughput, transaction latency, and expected gas costs compared to Ethereum mainnet—essential for planning dApp user experience.",
+    "link": "https://docs.base.org/base-learn/docs/performance-and-costs"
+  },
+  {
+    "title": "Why Build on Base?",
+    "description": "The key benefits (affordability, developer tooling, and ecosystem support) of choosing Base for your next decentralized application.",
+    "link": "https://docs.base.org/base-learn/docs/why-build-on-base"
+  },
+  {
+    "title": "Path to Decentralization",
+    "description": "Coinbaseʼs plan for progressively decentralizing the network, including how Base aims to become more community-governed over time.",
+    "link": "https://docs.base.org/base-learn/docs/decentralization"
+  },
+  {
+    "title": "Bridging to Base: Overview",
+    "description": "The basics of bridging from Ethereum mainnet to Base, important considerations like fees, finality times, and how bridging works under the hood.",
+    "link": "https://docs.base.org/base-learn/docs/user-docs/bridging"
+  },
+  {
+    "title": "How to Use the Base Bridge",
+    "description": "Step-by-step instructions for transferring ETH or other tokens from Ethereum to Base, plus troubleshooting common bridging errors.",
+    "link": "https://docs.base.org/base-learn/docs/user-docs/using-the-bridge"
+  },
+  {
+    "title": "Building on Base: Developer Overview",
+    "description": "A one-stop overview of all the tools, frameworks, and relevant resources (like Hardhat, Foundry, or Ethers.js) youʼll need to start writing and deploying contracts on Base.",
+    "link": "https://docs.base.org/base-learn/docs/developers/overview"
+  },
+  {
+    "title": "NFT Guide for Base",
+    "description": "How to deploy ERC-721 or ERC-1155 tokens on Base, handle metadata, and integrate with NFT tooling or marketplaces that support L2 networks.",
+    "link": "https://docs.base.org/base-learn/docs/developers/nft-guide"
+  },
+  {
+    "title": "Security Model & Best Practices",
+    "description": "The unique security considerations for L2 rollups, bridging risk, and recommended best practices for secure contract development on Base.",
+    "link": "https://docs.base.org/base-learn/docs/developers/security"
+  },
+  {
+    "title": "Optimism (OP) Stack Fundamentals",
+    "description": "How Base is built atop the OP Stack from Optimism, reusing core components for consensus, execution, and bridging.",
+    "link": "https://docs.base.org/base-learn/docs/key-concepts#op-stack"
+  },
+  {
+    "title": "Gas & Fees on Base",
+    "description": "The cost structure for transactions, tips for optimizing gas usage, and how to calculate user fees so you can budget your dAppʼs operational expenses.",
+    "link": "https://docs.base.org/base-learn/docs/performance-and-costs#costs-on-base"
+  },
+  {
+    "title": "Base Ecosystem & Partners",
+    "description": "The growing landscape of wallets, bridges, oracles, and other infrastructure providers that are building on or integrating with Base.",
+    "link": "https://docs.base.org/base-learn/docs/ecosystem"
+  },
+  {
+    "title": "Cross-Chain Messaging on Base",
+    "description": "The basics of sending messages between Ethereum and Base or other L2s, plus guidance on cross-chain contract calls and data passing.",
+    "link": "https://docs.base.org/base-learn/docs/developers/cross-chain"
+  },
+  {
+    "title": "Deploy a Simple Token (ERC-20)",
+    "description": "Walkthrough for compiling and deploying an ERC-20 contract, plus a sample Hardhat config tailored for Base.",
+    "link": "https://docs.base.org/base-learn/docs/developers/overview#-build-a-simple-erc20-token"
+  },
+  {
+    "title": "Deploy an NFT (ERC-721)",
+    "description": "Step-by-step instructions for creating and deploying an ERC-721 NFT, including code snippets and recommended frameworks.",
+    "link": "https://docs.base.org/base-learn/docs/developers/nft-guide#creating-an-nft-contract"
+  },
+  {
+    "title": "Hardhat + Base Configuration",
+    "description": "How to configure Hardhatʼs network settings for Base, properly set up deployment scripts, and verify contracts on supported explorers.",
+    "link": "https://docs.base.org/base-learn/docs/developers/tooling#hardhat"
+  },
+  {
+    "title": "Foundry + Base Configuration",
+    "description": "Setting up Foundry for Base (forge, cast, anvil), writing tests that run against the Base testnet, and recommended cheat codes or plugins.",
+    "link": "https://docs.base.org/base-learn/docs/developers/tooling#foundry"
+  },
+  {
+    "title": "Ethers.js on Base",
+    "description": "Basic examples of connecting Ethers.js to a Base provider, sending transactions, reading contract data, and managing private keys/wallets.",
+    "link": "https://docs.base.org/base-learn/docs/developers/tooling#ethersjs"
+  },
+  {
+    "title": "Full-Stack dApp Example",
+    "description": "An end-to-end example—smart contract, front-end integration (React or Next.js), and deployment to Base testnet.",
+    "link": "https://docs.base.org/base-learn/docs/developers/overview#build-your-first-dapp"
+  },
+  {
+    "title": "Using Block Explorers for Base",
+    "description": "Which block explorers support Base, how to verify your contracts, and how to debug transaction failures or logs on L2.",
+    "link": "https://docs.base.org/base-learn/docs/developers/tooling#block-explorer"
+  },
+  {
+    "title": "Security Audits & Recommendations",
+    "description": "Guidance on the audit process for projects building on Base, known vulnerabilities, and how to handle bridging or L2-specific security pitfalls.",
+    "link": "https://docs.base.org/base-learn/docs/developers/security#audits-and-recommendations"
+  },
+  {
+    "title": "Example Projects & Templates",
+    "description": "Pre-built repositories, code snippets, and scaffolds to jumpstart development (e.g., Hardhat boilerplates, Foundry templates, dApp front-end frameworks).",
+    "link": "https://docs.base.org/base-learn/docs/developers/tooling#examples--templates"
+  },
+  {
+    "title": "Launching Your dApp on Base Mainnet",
+    "description": "Final best practices for releasing your project into production on Base mainnet—ensuring contract verifications, bridging liquidity, and user experience optimizations.",
+    "link": "https://docs.base.org/base-learn/docs/developers/overview#mainnet-deployment"
+  }
+]
